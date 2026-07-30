@@ -25,6 +25,56 @@ type Result = {
 
 const STORAGE_KEY = "luckora_talent_result_v1";
 
+const dimensionMarks: Record<string, { code: string; icon: string; short: string }> = {
+  aesthetic: { code: "J", icon: "🎨", short: "美学" },
+  kinesthetic: { code: "F", icon: "🏃", short: "身体" },
+  logical: { code: "B", icon: "🔢", short: "逻辑" },
+  language: { code: "A", icon: "✏️", short: "语言" },
+  interpersonal: { code: "E", icon: "🤝", short: "人际" },
+  intrapersonal: { code: "D", icon: "🪞", short: "内省" },
+  nature: { code: "H", icon: "🌱", short: "自然" },
+  musical: { code: "G", icon: "🎵", short: "音乐" },
+  spatial: { code: "C", icon: "🗺️", short: "空间" },
+  execution: { code: "I", icon: "✅", short: "执行" },
+};
+
+const cautiousCareers = [
+  ["金融分析师", "需要大量数据分析和逻辑推理"],
+  ["程序员/工程师", "需要严密逻辑思维和数学基础"],
+  ["精算师", "需要极强数学与概率分析能力"],
+  ["纯流程行政岗", "重复事务较多，创造空间有限"],
+];
+
+const actionPlans = [
+  {
+    title: "短期目标",
+    period: "1-3个月",
+    items: [
+      "挑一个你最有感觉的方向，做一个小作品或小案例",
+      "把结果发到小红书/朋友圈，观察别人最关心什么",
+      "每周复盘一次：哪些事情做完后更有能量",
+    ],
+  },
+  {
+    title: "中期发展",
+    period: "6-12个月",
+    items: [
+      "建立个人作品集或案例库，记录你的成长轨迹",
+      "固定一个输出渠道，形成稳定表达习惯",
+      "主动承担一次能用到优势组合的项目",
+    ],
+  },
+  {
+    title: "长期愿景",
+    period: "持续思考",
+    items: [
+      "形成一个别人能识别的个人风格",
+      "成为某个细分领域的解读者、组织者或创造者",
+      "用你的天赋组合创造别人难以复制的价值",
+    ],
+  },
+];
+
 const dimensions: Dimension[] = [
   {
     key: "aesthetic",
@@ -249,6 +299,51 @@ export default function Home() {
     if (!top || !second) return [];
     return [...top.directions, ...second.directions.slice(0, 2)];
   }, [top, second]);
+  const orderedScores = useMemo(() => {
+    if (!result) return [];
+    return dimensions.map((dimension) => {
+      const item = result.ranked.find((ranked) => ranked.key === dimension.key)!;
+      return item;
+    });
+  }, [result]);
+  const reportScore = useMemo(() => {
+    if (!result) return 0;
+    const topThree = result.ranked.slice(0, 3);
+    return Math.round(
+      topThree.reduce((sum, item) => sum + item.percent, 0) / topThree.length,
+    );
+  }, [result]);
+  const reportType = useMemo(() => {
+    if (!top || !second || !third) return "优势探索型";
+    if ([top.key, second.key, third.key].includes("aesthetic")) {
+      return "文化创意型";
+    }
+    if ([top.key, second.key, third.key].includes("logical")) {
+      return "结构策略型";
+    }
+    if ([top.key, second.key, third.key].includes("interpersonal")) {
+      return "关系洞察型";
+    }
+    return "复合成长型";
+  }, [top, second, third]);
+  const growthItems = useMemo(() => {
+    if (!result) return [];
+    return [...result.ranked].reverse().slice(0, 3);
+  }, [result]);
+  const radarPoints = useMemo(() => {
+    if (!orderedScores.length) return "";
+    const center = 120;
+    const radius = 82;
+    return orderedScores
+      .map((item, index) => {
+        const angle = (Math.PI * 2 * index) / orderedScores.length - Math.PI / 2;
+        const value = Math.max(0.2, item.score / 20);
+        const x = center + Math.cos(angle) * radius * value;
+        const y = center + Math.sin(angle) * radius * value;
+        return `${x.toFixed(1)},${y.toFixed(1)}`;
+      })
+      .join(" ");
+  }, [orderedScores]);
 
   useEffect(() => {
     const stored = window.localStorage.getItem(STORAGE_KEY);
@@ -465,21 +560,254 @@ export default function Home() {
           </div>
 
           <div className="stack">
-            <div className="report-hero">
-              <span className="pill">你的优势画像</span>
-              <h1>你的核心天赋是：{top.name}</h1>
-              <p>
-                你最突出的组合是 {top.name}、{second.name} 和 {third.name}
-                。这不是单一能力，而是一组会互相放大的优势结构。
+            <div className="report-cover">
+              <div className="cover-kicker">天赋能力测试报告</div>
+              <div className="cover-subtitle">
+                职业深度版 · 基于多元智能理论
+              </div>
+              <div className="summary-card">
+                <div
+                  className="score-ring"
+                  style={{
+                    background: `conic-gradient(#8f5cff ${reportScore * 3.6}deg, #eee7fb 0deg)`,
+                  }}
+                >
+                  <div>
+                    <strong>{reportScore}</strong>
+                    <span>%</span>
+                  </div>
+                </div>
+                <div className="summary-copy">
+                  <span className="type-pill">
+                    {dimensionMarks[top.key].icon} {reportType}
+                  </span>
+                  <p>
+                    你最具有 {top.name}、{second.name}、{third.name}
+                    。这份报告会把你的优势、适合职业、成长空间和行动计划拆开看。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="report-block">
+              <div className="block-head">
+                <span className="block-icon">📊</span>
+                <h2>天赋能力图谱</h2>
+                <small>10维度全景展示</small>
+              </div>
+              <div className="radar-wrap">
+                <svg className="radar" viewBox="0 0 240 240" role="img">
+                  {[1, 2, 3, 4].map((level) => (
+                    <circle
+                      cx="120"
+                      cy="120"
+                      fill="none"
+                      key={level}
+                      r={level * 20}
+                    />
+                  ))}
+                  {orderedScores.map((_, index) => {
+                    const angle =
+                      (Math.PI * 2 * index) / orderedScores.length - Math.PI / 2;
+                    const x = 120 + Math.cos(angle) * 88;
+                    const y = 120 + Math.sin(angle) * 88;
+                    return (
+                      <line
+                        key={index}
+                        x1="120"
+                        x2={x}
+                        y1="120"
+                        y2={y}
+                      />
+                    );
+                  })}
+                  <polygon className="radar-area" points={radarPoints} />
+                  {orderedScores.map((item, index) => {
+                    const angle =
+                      (Math.PI * 2 * index) / orderedScores.length - Math.PI / 2;
+                    const x = 120 + Math.cos(angle) * 104;
+                    const y = 120 + Math.sin(angle) * 104;
+                    return (
+                      <text key={item.key} x={x} y={y}>
+                        {dimensionMarks[item.key].code}({item.score})
+                      </text>
+                    );
+                  })}
+                </svg>
+                <div className="legend-row">
+                  <span>16-20 非常擅长</span>
+                  <span>12-15 有些擅长</span>
+                  <span>4-11 待发展</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="report-block">
+              <div className="block-head">
+                <span className="block-icon">📋</span>
+                <h2>各项天赋详情</h2>
+              </div>
+              <div className="dimension-table">
+                {orderedScores.map((item) => (
+                  <div className="dimension-row" key={item.key}>
+                    <span className="dimension-code">
+                      {dimensionMarks[item.key].code}
+                    </span>
+                    <b>{dimensionMarks[item.key].short}</b>
+                    <div className="dimension-track">
+                      <i style={{ width: `${item.percent}%` }} />
+                    </div>
+                    <strong>{item.score}</strong>
+                    <em>
+                      {item.score >= 16
+                        ? "非常擅长"
+                        : item.score >= 12
+                          ? "有些擅长"
+                          : "待发展"}
+                    </em>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="report-block">
+              <div className="block-head">
+                <span className="block-icon">👑</span>
+                <h2>核心优势深度解读</h2>
+                <small>你的第一天赋</small>
+              </div>
+              <div className="deep-dive">
+                <div className="deep-icon">{dimensionMarks[top.key].icon}</div>
+                <div>
+                  <h3>{top.name}</h3>
+                  <div className="deep-score">
+                    <span style={{ width: `${top.percent}%` }} />
+                  </div>
+                  <p className="deep-quote">
+                    把你的核心感知转化为别人能看见、能理解、能使用的价值。
+                  </p>
+                </div>
+              </div>
+              <p className="deep-text">{top.profile}</p>
+              <h3 className="mini-title">你可能的特征</h3>
+              <ul className="feature-list">
+                <li>{top.behavior}</li>
+                <li>在做选择时，你更适合看“长期能量”，而不是只看短期热门。</li>
+                <li>当环境允许你使用优势时，你的学习速度和自我驱动力会明显提高。</li>
+              </ul>
+              <h3 className="mini-title">职场最佳应用场景</h3>
+              <div className="tag-row">
+                {top.directions.map((tag) => (
+                  <span className="tag" key={tag}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <div className="warning-card">
+                <b>需要注意的陷阱</b>
+                <p>{top.blind}</p>
+              </div>
+            </div>
+
+            <div className="report-block">
+              <div className="block-head">
+                <span className="block-icon">💼</span>
+                <h2>职业发展指南</h2>
+                <small>基于天赋的职业匹配</small>
+              </div>
+              <h3 className="mini-title">推荐职业方向</h3>
+              <div className="career-list">
+                {[
+                  ["内容策划", "需要优秀表达、选题判断和用户感知能力"],
+                  ["视觉/品牌设计", "需要审美判断、空间结构和持续创作能力"],
+                  ["用户研究", "需要观察、共情和结构化分析能力"],
+                  ["新媒体运营", "需要内容表达、节奏把控和执行推进能力"],
+                  ["自由职业/个人IP", "适合把优势沉淀成作品和服务"],
+                  ["产品策划", "适合把用户需求拆成具体体验和流程"],
+                ].map(([title, desc], index) => (
+                  <div className="career-card" key={title}>
+                    <span>{index + 1}</span>
+                    <h3>{title}</h3>
+                    <p>{desc}</p>
+                    <div className="career-tags">
+                      <i>{dimensionMarks[top.key].icon} {dimensionMarks[top.key].short}</i>
+                      <i>{dimensionMarks[second.key].icon} {dimensionMarks[second.key].short}</i>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <p className="small-note">
+                小贴士：在选择时，不妨想一想哪类工作更能让你的天赋被看见、被需要。
               </p>
             </div>
 
-            <div className="score-list">
-              {result.ranked.slice(0, 5).map((item, index) => (
-                <div className="score-card" key={item.key}>
+            <div className="report-block">
+              <div className="block-head caution">
+                <span className="block-icon">⚠️</span>
+                <h2>建议谨慎的方向</h2>
+              </div>
+              <div className="caution-list">
+                {cautiousCareers.map(([title, desc]) => (
+                  <div key={title}>
+                    <b>{title}：</b>
+                    <span>{desc}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="report-block">
+              <div className="block-head">
+                <span className="block-icon">🌱</span>
+                <h2>成长空间</h2>
+                <small>潜力提升方向</small>
+              </div>
+              <div className="growth-list">
+                {growthItems.map((item) => (
+                  <div className="growth-card" key={item.key}>
+                    <h3>
+                      {dimensionMarks[item.key].icon} {item.name}
+                      <span>{item.score}分 · {item.score >= 12 ? "可继续提升" : "需要更多练习"}</span>
+                    </h3>
+                    <p>{item.desc}目前不是你的主力方向，遇到相关任务时，可以借助工具或找擅长的人一起梳理。</p>
+                    <b>提升建议：{item.advice}</b>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="report-block">
+              <div className="block-head">
+                <span className="block-icon">📅</span>
+                <h2>行动计划</h2>
+                <small>分阶段成长路径</small>
+              </div>
+              <p className="plan-intro">
+                下面是一份可以直接照着执行的行动清单，帮助你把“看到报告”变成“真正发生改变”。
+              </p>
+              <div className="plan-list">
+                {actionPlans.map((plan) => (
+                  <div className="plan-card" key={plan.title}>
+                    <h3>{plan.title}<span>{plan.period}</span></h3>
+                    {plan.items.map((item) => (
+                      <p key={item}>✓ {item}</p>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="report-block">
+              <div className="block-head">
+                <span className="block-icon">🏅</span>
+                <h2>你的 TOP 5 天赋</h2>
+              </div>
+              <div className="score-list">
+                {result.ranked.slice(0, 5).map((item, index) => (
+                  <div className="score-card" key={item.key}>
                   <div className="score-row">
                     <span>
-                      TOP {index + 1} {item.name}
+                      TOP {index + 1} {dimensionMarks[item.key].icon} {item.name}
                     </span>
                     <span>{item.percent}%</span>
                   </div>
@@ -489,8 +817,9 @@ export default function Home() {
                       style={{ width: `${item.percent}%` }}
                     />
                   </div>
-                </div>
-              ))}
+                  </div>
+                ))}
+              </div>
             </div>
 
             <div className="report-section">
@@ -560,6 +889,9 @@ export default function Home() {
               <h2>保存提醒</h2>
               <p>
                 这份报告已经锁定在当前浏览器。再次打开或刷新页面，会直接进入结果页，不会重新答题。
+              </p>
+              <p className="report-time">
+                {new Date(result.createdAt).toLocaleString("zh-CN")} · 天赋能力测试（40题） · 职业深度版
               </p>
             </div>
 

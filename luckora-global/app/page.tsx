@@ -5,7 +5,7 @@ import { useEffect, useMemo } from "react";
 import { CosmicOrb } from "@/components/cosmic-orb";
 import { StarField } from "@/components/star-field";
 import { getDictionary } from "@/lib/i18n";
-import { jsonLd, websiteSchema } from "@/lib/schema";
+import { jsonLd, organizationSchema, websiteSchema } from "@/lib/schema";
 
 export default function Home() {
   const locale = "en";
@@ -112,6 +112,12 @@ export default function Home() {
       <script
         dangerouslySetInnerHTML={{
           __html: jsonLd(websiteSchema(dictionary.meta.description)),
+        }}
+        type="application/ld+json"
+      />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: jsonLd(organizationSchema()),
         }}
         type="application/ld+json"
       />

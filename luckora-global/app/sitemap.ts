@@ -4,7 +4,15 @@ import { getFutureSeoRoutes, seoHubs } from "@/lib/seo-routes";
 import { siteConfig } from "@/lib/seo";
 import { testConfigs } from "@/lib/tests";
 
-const staticPages = ["", "/tests", "/test", "/report"];
+const staticPages = [
+  "",
+  "/tests",
+  "/about",
+  "/contact",
+  "/privacy",
+  "/terms",
+  "/disclaimer",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const personalityPages = personalityProfiles.map(

@@ -71,15 +71,10 @@ export function websiteSchema(description = siteConfig.defaultDescription) {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: siteConfig.name,
-    alternateName: ["AI Self Discovery Platform", "AI Self Discovery Tests", "幸运小宇宙"],
+    alternateName: ["AI Self Discovery Platform", "AI Self Discovery Tests"],
     url: siteConfig.baseUrl,
     description,
     inLanguage: "en",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${siteConfig.baseUrl}/search?q={search_term_string}`,
-      "query-input": "required name=search_term_string",
-    },
   };
 }
 
@@ -107,6 +102,41 @@ export function personalityArticleSchema(profile: PersonalityProfile) {
     publisher: {
       "@type": "Organization",
       name: siteConfig.name,
+    },
+  };
+}
+
+export function organizationSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: siteConfig.name,
+    url: siteConfig.baseUrl,
+    email: siteConfig.contactEmail,
+    description: siteConfig.defaultDescription,
+  };
+}
+
+export function webPageSchema({
+  title,
+  description,
+  path,
+}: {
+  title: string;
+  description: string;
+  path: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title,
+    description,
+    url: `${siteConfig.baseUrl}${path}`,
+    inLanguage: "en",
+    isPartOf: {
+      "@type": "WebSite",
+      name: siteConfig.name,
+      url: siteConfig.baseUrl,
     },
   };
 }

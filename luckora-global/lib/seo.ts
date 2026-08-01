@@ -5,6 +5,7 @@ import type { TestConfig } from "@/lib/tests";
 export const siteConfig = {
   name: "Luckora",
   baseUrl: "https://luckora.online",
+  contactEmail: "hello@luckora.online",
   ogImagePath: "/opengraph-image",
   defaultTitle: "Luckora - AI Self Discovery Tests",
   defaultDescription:
@@ -65,6 +66,7 @@ export function createSeoMetadata({
       card: "summary_large_image",
       title,
       description,
+      images: [siteConfig.ogImagePath],
     },
   };
 }

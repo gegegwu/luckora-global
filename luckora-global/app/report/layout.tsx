@@ -15,6 +15,11 @@ export const metadata: Metadata = createSeoMetadata({
   ],
 });
 
+metadata.robots = {
+  index: false,
+  follow: true,
+};
+
 export default function ReportLayout({
   children,
 }: Readonly<{

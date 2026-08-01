@@ -4,7 +4,7 @@ import { Suspense, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { QuestionCard } from "@/components/question-card";
 import { StarField } from "@/components/star-field";
-import { trackEvent } from "@/lib/analytics";
+import { trackTestStarted } from "@/lib/analytics";
 import {
   talentQuestions,
   type TalentOption,
@@ -35,10 +35,7 @@ function TestContent() {
 
   useEffect(() => {
     if (hasStarted && answers.length === 0) {
-      trackEvent("test_start", {
-        test_id: "personality",
-        test_slug: "personality-test",
-      });
+      trackTestStarted();
     }
   }, [answers.length, hasStarted]);
 
@@ -102,12 +99,6 @@ function TestContent() {
             <a
               className="primary-action"
               href="/test?start=1"
-              onClick={() =>
-                trackEvent("test_start", {
-                  test_id: "personality",
-                  test_slug: "personality-test",
-                })
-              }
             >
               <span>Start Discovery</span>
             </a>

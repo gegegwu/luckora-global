@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ExploreMore, RelatedTests } from "@/components/seo-link-sections";
 import { StarField } from "@/components/star-field";
+import { TrackedTestLink } from "@/components/tracked-test-link";
 import {
   breadcrumbSchema,
   faqPageSchema,
@@ -74,9 +75,13 @@ export default async function TestLandingPage({
 
         <div className="result-actions">
           {test.status === "available" && test.startPath ? (
-            <a className="primary-action" href={test.startPath}>
+            <TrackedTestLink
+              className="primary-action"
+              href={test.startPath}
+              source={`tests_${test.slug}`}
+            >
               <span>Start Free Test</span>
-            </a>
+            </TrackedTestLink>
           ) : (
             <a className="secondary-action" href="/tests">
               Back to Tests

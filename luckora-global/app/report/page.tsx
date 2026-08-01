@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { ResultCard } from "@/components/result-card";
 import { StarField } from "@/components/star-field";
-import { trackEvent } from "@/lib/analytics";
+import { trackReportViewed, trackTestCompleted } from "@/lib/analytics";
 import {
   calculateTalentResult,
   resultStorageKey,
@@ -33,12 +33,7 @@ export default function ReportPage() {
         resultStorageKey,
         JSON.stringify(calculatedResult),
       );
-      trackEvent("test_complete", {
-        result_slug: calculatedResult.slug,
-        result_type: calculatedResult.type,
-        test_id: "personality",
-        test_slug: "personality-test",
-      });
+      trackTestCompleted(calculatedResult.slug, calculatedResult.type);
       setResult(calculatedResult);
       return;
     }
@@ -53,12 +48,7 @@ export default function ReportPage() {
       return;
     }
 
-    trackEvent("result_view", {
-      result_slug: result.slug,
-      result_type: result.type,
-      test_id: "personality",
-      test_slug: "personality-test",
-    });
+    trackReportViewed(result.slug, result.type);
   }, [result]);
 
   return (

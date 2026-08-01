@@ -1,7 +1,10 @@
 export type AnalyticsEventName =
-  | "test_start"
-  | "test_complete"
-  | "result_view";
+  | "homepage_view"
+  | "start_test_click"
+  | "test_started"
+  | "test_completed"
+  | "report_viewed"
+  | "premium_click";
 
 type AnalyticsEventParams = Record<string, string | number | boolean>;
 
@@ -42,4 +45,51 @@ export function trackEvent(
   window.dataLayer.push(eventPayload);
 
   window.gtag?.("event", eventName, params);
+}
+
+export function trackHomepageView() {
+  trackEvent("homepage_view", {
+    page_path: "/",
+  });
+}
+
+export function trackStartTestClick(source: string) {
+  trackEvent("start_test_click", {
+    source,
+    test_id: "personality",
+    test_slug: "personality-test",
+  });
+}
+
+export function trackTestStarted() {
+  trackEvent("test_started", {
+    test_id: "personality",
+    test_slug: "personality-test",
+  });
+}
+
+export function trackTestCompleted(resultSlug: string, resultType: string) {
+  trackEvent("test_completed", {
+    result_slug: resultSlug,
+    result_type: resultType,
+    test_id: "personality",
+    test_slug: "personality-test",
+  });
+}
+
+export function trackReportViewed(resultSlug: string, resultType: string) {
+  trackEvent("report_viewed", {
+    result_slug: resultSlug,
+    result_type: resultType,
+    test_id: "personality",
+    test_slug: "personality-test",
+  });
+}
+
+export function trackPremiumClick(source: string) {
+  trackEvent("premium_click", {
+    source,
+    test_id: "personality",
+    test_slug: "personality-test",
+  });
 }

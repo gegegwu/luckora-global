@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useEffect, useMemo } from "react";
 import { CosmicOrb } from "@/components/cosmic-orb";
 import { StarField } from "@/components/star-field";
+import { trackHomepageView, trackStartTestClick } from "@/lib/analytics";
 import { getDictionary } from "@/lib/i18n";
 import { jsonLd, organizationSchema, websiteSchema } from "@/lib/schema";
 
@@ -16,6 +17,10 @@ export default function Home() {
     document.documentElement.lang = locale;
     document.documentElement.dir = direction;
   }, [direction, locale]);
+
+  useEffect(() => {
+    trackHomepageView();
+  }, []);
 
   return (
     <main className="site-shell" dir={direction}>
@@ -38,7 +43,11 @@ export default function Home() {
         </nav>
 
         <div className="nav-actions">
-          <a className="nav-cta" href="/tests/personality-test">
+          <a
+            className="nav-cta"
+            href="/tests/personality-test"
+            onClick={() => trackStartTestClick("homepage_nav")}
+          >
             {dictionary.nav.start}
           </a>
         </div>
@@ -59,6 +68,7 @@ export default function Home() {
             <motion.a
               className="primary-action"
               href="/tests/personality-test"
+              onClick={() => trackStartTestClick("homepage_hero")}
               whileHover={{ scale: 1.025 }}
               whileTap={{ scale: 0.98 }}
             >

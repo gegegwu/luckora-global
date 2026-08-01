@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "title": "Luckora | AI Self Discovery Tests",
+    "description": "Discover your personality, strengths, career direction and hidden potential with AI-powered self discovery tests.",
+    "keywords": "AI self discovery tests, AI personality test, career test, strengths test, hidden potential test, Luckora"
+  },
+  "nav": {
+    "tests": "Tests",
+    "vision": "Vision",
+    "insights": "Insights",
+    "start": "Start"
+  },
+  "hero": {
+    "eyebrow": "AI Self Discovery Tests",
+    "title": "Discover The Universe Within You",
+    "subtitle": "Discover your personality, strengths, career direction and hidden potential with AI-powered self discovery tests.",
+    "cta": "Start Free Test",
+    "secondary": "Explore the vision",
+    "orbLabel": "Discover yourself through the quiet signals of your inner universe.",
+    "signal": "Inner light awakening"
+  },
+  "cards": [
+    {
+      "title": "Discover Your Talent",
+      "subtitle": "Hidden Talent Discovery",
+      "description": "Map the strengths that already shape how you learn, create and make decisions."
+    },
+    {
+      "title": "Understand Yourself",
+      "subtitle": "Personality Insight",
+      "description": "Turn scattered feelings into clear patterns you can actually use."
+    },
+    {
+      "title": "Future You",
+      "subtitle": "Future Direction",
+      "description": "Find growth directions that fit your energy, personality and long-term potential."
+    }
+  ],
+  "seo": {
+    "title": "A new kind of AI self discovery journey",
+    "body": "Luckora is designed for people searching for hidden talent tests, personality insight, career direction, future potential and self discovery tools. The platform will combine lightweight tests, AI-generated reports and multilingual guidance for a global audience."
+  },
+  "testEntry": {
+    "eyebrow": "Journey Gateway",
+    "title": "Your first Luckora journey is being prepared",
+    "body": "This page is reserved for the future assessment flow. The first public test will focus on hidden talents, personality patterns and AI-era growth direction.",
+    "primary": "Return Home",
+    "status": "Test logic not enabled yet",
+    "items": [
+      "Adaptive questions",
+      "AI-style personal report",
+      "One-time completion with saved result"
+    ]
+  },
+  "reportEntry": {
+    "eyebrow": "AI Report",
+    "title": "Your future report experience will live here",
+    "body": "Luckora will turn answers into an elegant AI-powered self discovery report. For now, this page is reserved for the next product phase.",
+    "primary": "Return Home"
+  },
+  "profileEntry": {
+    "eyebrow": "Profile",
+    "title": "Your inner universe profile is coming later",
+    "body": "This page is reserved for a future personal profile where users can save insights, reports and growth signals.",
+    "primary": "Return Home"
+  },
+  "language": {
+    "label": "Choose language"
+  }
+}

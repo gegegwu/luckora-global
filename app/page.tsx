@@ -217,34 +217,488 @@ const dimensions: Dimension[] = [
   },
 ];
 
-const stems = [
-  "我很容易注意到颜色、构图或细节是否舒服。",
-  "需要动手完成的任务，通常比纯理论更适合我。",
-  "遇到复杂问题时，我会下意识寻找背后的规律。",
-  "我能比较自然地把想法说清楚或写清楚。",
-  "我能很快感受到别人真实的情绪变化。",
-  "我经常会反思自己为什么会有某种感受或选择。",
-  "我对环境、季节、植物或生活细节的变化很敏感。",
-  "音乐、节奏或声音氛围会明显影响我的状态。",
-  "我能在脑海里想象空间、画面或布局。",
-  "只要目标清楚，我通常能把事情一步步推进完成。",
+type Question = {
+  id: number;
+  dimension: string;
+  text: string;
+};
+
+const TOTAL_QUESTIONS = 40;
+const SCREENING_QUESTIONS = 20;
+
+const questionBank: Question[] = [
+  {
+    id: 1,
+    dimension: "aesthetic",
+    text: "刷到一个账号或商品时，我会先被整体风格、配色和质感吸引。",
+  },
+  {
+    id: 2,
+    dimension: "logical",
+    text: "别人讲一件复杂的事，我会下意识帮它整理成原因、步骤和结论。",
+  },
+  {
+    id: 3,
+    dimension: "interpersonal",
+    text: "一个人情绪不对时，即使他说没事，我也常常能感觉出来。",
+  },
+  {
+    id: 4,
+    dimension: "spatial",
+    text: "看户型图、路线图、平面图时，我通常能比较快在脑子里形成画面。",
+  },
+  {
+    id: 5,
+    dimension: "language",
+    text: "我经常能把别人说不清楚的感受，用一句更准确的话表达出来。",
+  },
+  {
+    id: 6,
+    dimension: "execution",
+    text: "只要目标明确，我更愿意先行动起来，而不是一直停在讨论阶段。",
+  },
+  {
+    id: 7,
+    dimension: "nature",
+    text: "环境是否干净、舒服、有秩序，会明显影响我的心情和效率。",
+  },
+  {
+    id: 8,
+    dimension: "musical",
+    text: "视频、直播或一段话的节奏不对时，我会很快觉得哪里别扭。",
+  },
+  {
+    id: 9,
+    dimension: "kinesthetic",
+    text: "比起听别人讲很多遍，我更容易通过上手做一遍来学会。",
+  },
+  {
+    id: 10,
+    dimension: "intrapersonal",
+    text: "做重要选择前，我需要先弄清楚自己真实在意的是什么。",
+  },
+  {
+    id: 11,
+    dimension: "aesthetic",
+    text: "如果一个东西功能还可以但不好看，我会明显降低对它的兴趣。",
+  },
+  {
+    id: 12,
+    dimension: "logical",
+    text: "遇到问题时，我会先找关键变量，而不是马上凭情绪下判断。",
+  },
+  {
+    id: 13,
+    dimension: "interpersonal",
+    text: "在多人聊天或合作里，我常常能察觉谁被忽略了、谁不太舒服。",
+  },
+  {
+    id: 14,
+    dimension: "spatial",
+    text: "整理房间、布置桌面或安排动线时，我会自然考虑位置是否顺手。",
+  },
+  {
+    id: 15,
+    dimension: "language",
+    text: "写文案、起标题、组织话术这类事情，会让我有发挥空间。",
+  },
+  {
+    id: 16,
+    dimension: "execution",
+    text: "我喜欢把一个大任务拆成小步骤，然后一项一项完成。",
+  },
+  {
+    id: 17,
+    dimension: "nature",
+    text: "我容易注意到天气、气味、光线、植物或生活物品的细微变化。",
+  },
+  {
+    id: 18,
+    dimension: "musical",
+    text: "听音乐或声音时，我会自然关注情绪、停顿、轻重和节拍变化。",
+  },
+  {
+    id: 19,
+    dimension: "kinesthetic",
+    text: "需要动手操作、拍摄、展示、练习的任务，通常比纯坐着想更适合我。",
+  },
+  {
+    id: 20,
+    dimension: "intrapersonal",
+    text: "我会反复复盘自己的状态，想知道为什么某件事让我开心或消耗。",
+  },
+  {
+    id: 21,
+    dimension: "aesthetic",
+    text: "别人让我帮忙看图片、穿搭、包装或排版时，我通常能给出具体建议。",
+  },
+  {
+    id: 22,
+    dimension: "logical",
+    text: "如果一个方案听起来很热闹但逻辑不闭环，我很难真正信服。",
+  },
+  {
+    id: 23,
+    dimension: "interpersonal",
+    text: "朋友遇到情绪问题时，常会来找我聊，因为我比较能理解他们。",
+  },
+  {
+    id: 24,
+    dimension: "spatial",
+    text: "做内容或汇报时，我更喜欢用图、框架、草图来表达想法。",
+  },
+  {
+    id: 25,
+    dimension: "language",
+    text: "需要公开表达、讲解、沟通说服时，我虽然会紧张，但通常能完成得不错。",
+  },
+  {
+    id: 26,
+    dimension: "execution",
+    text: "团队里如果没人推进，我常会忍不住把时间、分工和下一步定下来。",
+  },
+  {
+    id: 27,
+    dimension: "nature",
+    text: "我会被自然、家居、饮食、植物、生活方式类内容吸引并获得放松。",
+  },
+  {
+    id: 28,
+    dimension: "musical",
+    text: "剪视频、做口播或讲故事时，我会在意节奏是不是抓人。",
+  },
+  {
+    id: 29,
+    dimension: "kinesthetic",
+    text: "我的身体状态会直接影响判断；累了、闷了，我需要走动或活动一下才恢复。",
+  },
+  {
+    id: 30,
+    dimension: "intrapersonal",
+    text: "比起立刻听别人建议，我更需要先和自己对齐，再决定要不要行动。",
+  },
+  {
+    id: 31,
+    dimension: "aesthetic",
+    text: "我很难忍受粗糙、杂乱或没有统一风格的视觉呈现。",
+  },
+  {
+    id: 32,
+    dimension: "logical",
+    text: "当别人情绪化表达时，我会想先把事实、推测和感受分开。",
+  },
+  {
+    id: 33,
+    dimension: "interpersonal",
+    text: "我能根据对方的反应调整说话方式，让沟通更容易被接受。",
+  },
+  {
+    id: 34,
+    dimension: "spatial",
+    text: "看到一个物品或空间，我常能想象它换个位置、角度或组合后的样子。",
+  },
+  {
+    id: 35,
+    dimension: "language",
+    text: "我对措辞比较敏感，同一句话换个说法，给人的感觉会差很多。",
+  },
+  {
+    id: 36,
+    dimension: "execution",
+    text: "事情没有结果或长期拖着时，我会明显焦虑，想尽快推动闭环。",
+  },
+  {
+    id: 37,
+    dimension: "nature",
+    text: "如果生活环境太混乱，我会先想整理它，再开始做重要事情。",
+  },
+  {
+    id: 38,
+    dimension: "musical",
+    text: "我容易记住旋律、语气或某段声音带来的氛围感。",
+  },
+  {
+    id: 39,
+    dimension: "kinesthetic",
+    text: "别人示范一个动作或操作流程时，我通常能通过模仿慢慢找到感觉。",
+  },
+  {
+    id: 40,
+    dimension: "intrapersonal",
+    text: "我更适合做和长期价值感有关的事，只靠外界奖励很难让我持续。",
+  },
+  {
+    id: 41,
+    dimension: "aesthetic",
+    text: "做内容或作品时，我会花不少时间调整它的氛围，而不只是完成任务。",
+  },
+  {
+    id: 42,
+    dimension: "logical",
+    text: "我喜欢把混乱信息归类、排序，找到里面真正重要的部分。",
+  },
+  {
+    id: 43,
+    dimension: "interpersonal",
+    text: "我能比较快判断一个人更需要被安慰、被支持，还是被直接给建议。",
+  },
+  {
+    id: 44,
+    dimension: "spatial",
+    text: "我对比例、距离、位置关系比较敏感，东西摆歪了会想调整。",
+  },
+  {
+    id: 45,
+    dimension: "language",
+    text: "别人让我总结一段内容时，我通常能抓住重点并说得更顺。",
+  },
+  {
+    id: 46,
+    dimension: "execution",
+    text: "我会因为看到进度条、清单被划掉、任务完成而获得明显满足感。",
+  },
+  {
+    id: 47,
+    dimension: "nature",
+    text: "我对生活里的触感、温度、味道、光线这类细节有比较强的感受。",
+  },
+  {
+    id: 48,
+    dimension: "musical",
+    text: "一个人说话的语气、停顿和节奏，会影响我对这段话的理解。",
+  },
+  {
+    id: 49,
+    dimension: "kinesthetic",
+    text: "需要反复练习形成手感的事情，我通常不会太排斥。",
+  },
+  {
+    id: 50,
+    dimension: "intrapersonal",
+    text: "我能感受到自己什么时候是在勉强，什么时候是真的有热情。",
+  },
+  {
+    id: 51,
+    dimension: "aesthetic",
+    text: "选礼物、布置场景或搭配物品时，我会在意它给人的第一感觉。",
+  },
+  {
+    id: 52,
+    dimension: "logical",
+    text: "我喜欢知道一件事为什么有效，而不是只照着别人说的方法做。",
+  },
+  {
+    id: 53,
+    dimension: "interpersonal",
+    text: "我常常能发现两个人之间没说破的 tension 或微妙距离。",
+  },
+  {
+    id: 54,
+    dimension: "spatial",
+    text: "我更容易通过示意图、流程图或视觉结构理解新知识。",
+  },
+  {
+    id: 55,
+    dimension: "language",
+    text: "我会在意一句话是否有说服力、是否容易被误解。",
+  },
+  {
+    id: 56,
+    dimension: "execution",
+    text: "面对新项目时，我会想先定截止时间、优先级和最小可交付结果。",
+  },
+  {
+    id: 57,
+    dimension: "nature",
+    text: "我做选择时会考虑长期是否舒服、可持续，而不只是眼前效率。",
+  },
+  {
+    id: 58,
+    dimension: "musical",
+    text: "我对一段内容的情绪起伏很敏感，太平或太乱都会让我出戏。",
+  },
+  {
+    id: 59,
+    dimension: "kinesthetic",
+    text: "我在移动、整理、摆弄东西或实际操作时，更容易进入专注状态。",
+  },
+  {
+    id: 60,
+    dimension: "intrapersonal",
+    text: "我会用写下来、独处或复盘的方式整理自己的想法。",
+  },
+  {
+    id: 61,
+    dimension: "aesthetic",
+    text: "我常常能说出一个画面、账号或空间为什么高级，或为什么显得廉价。",
+  },
+  {
+    id: 62,
+    dimension: "logical",
+    text: "当信息很多时，我会想找一个模型或框架来理解它。",
+  },
+  {
+    id: 63,
+    dimension: "interpersonal",
+    text: "我比较擅长让不同性格的人在同一个场景里舒服地互动。",
+  },
+  {
+    id: 64,
+    dimension: "spatial",
+    text: "做拍摄、陈列、装修或排版时，我会自然考虑视线从哪里开始看。",
+  },
+  {
+    id: 65,
+    dimension: "language",
+    text: "如果我要推荐一个东西，我会先想怎么讲别人才更愿意听。",
+  },
+  {
+    id: 66,
+    dimension: "execution",
+    text: "我不喜欢事情一直停留在想法层面，更想看到实际结果。",
+  },
+  {
+    id: 67,
+    dimension: "nature",
+    text: "我适合在相对稳定、舒服、有节奏的环境里长期积累。",
+  },
+  {
+    id: 68,
+    dimension: "musical",
+    text: "我能感受到一段话或一条视频什么时候该快、什么时候该停顿。",
+  },
+  {
+    id: 69,
+    dimension: "kinesthetic",
+    text: "只看文字说明时我容易没感觉，但看到演示或自己操作后就清楚很多。",
+  },
+  {
+    id: 70,
+    dimension: "intrapersonal",
+    text: "如果一件事不符合我的内在价值，即使别人说很好，我也很难坚持。",
+  },
+  {
+    id: 71,
+    dimension: "aesthetic",
+    text: "别人觉得差不多就行时，我可能还会想继续优化细节和质感。",
+  },
+  {
+    id: 72,
+    dimension: "logical",
+    text: "我能比较快发现一个计划里最可能出问题的环节。",
+  },
+  {
+    id: 73,
+    dimension: "interpersonal",
+    text: "我会根据关系亲疏、场合和对方状态，调整自己表达的分寸。",
+  },
+  {
+    id: 74,
+    dimension: "spatial",
+    text: "我对空间层次、画面留白或页面结构是否清楚比较敏感。",
+  },
+  {
+    id: 75,
+    dimension: "language",
+    text: "我容易被好的表达打动，也会记住一些有力量的句子。",
+  },
+  {
+    id: 76,
+    dimension: "execution",
+    text: "如果一件事要长期推进，我会希望有固定节奏和可检查的节点。",
+  },
+  {
+    id: 77,
+    dimension: "nature",
+    text: "我会从生活细节里获得灵感，比如植物、食物、天气、房间状态。",
+  },
+  {
+    id: 78,
+    dimension: "musical",
+    text: "我容易被声音氛围影响状态，也知道什么声音能让我更进入感觉。",
+  },
+  {
+    id: 79,
+    dimension: "kinesthetic",
+    text: "我适合通过身体、动作、手感或现场体验来判断一件事适不适合自己。",
+  },
+  {
+    id: 80,
+    dimension: "intrapersonal",
+    text: "我能分辨自己是因为害怕而逃避，还是因为真的不想要。",
+  },
 ];
 
-const questions = Array.from({ length: 40 }, (_, index) => {
-  const dimension = dimensions[index % dimensions.length];
-  const round = Math.floor(index / dimensions.length);
-  const suffixes = [
-    "这常常是我的自然反应。",
-    "这类事情会让我更有能量。",
-    "别人也经常这样评价我。",
-    "在压力下我仍会表现出这个倾向。",
-  ];
-  return {
-    id: index + 1,
-    dimension: dimension.key,
-    text: stems[index % stems.length] + suffixes[round],
-  };
-});
+const initialQuestions = questionBank.slice(0, SCREENING_QUESTIONS);
+
+function summarizeAnswers(
+  selectedQuestions: Question[],
+  selectedAnswers: (number | null)[],
+) {
+  const scores = Object.fromEntries(
+    dimensions.map((dimension) => [dimension.key, 0]),
+  );
+  const counts = Object.fromEntries(
+    dimensions.map((dimension) => [dimension.key, 0]),
+  );
+
+  selectedQuestions.forEach((question, index) => {
+    const answer = selectedAnswers[index];
+    if (answer === null || answer === undefined) return;
+    scores[question.dimension] += answer;
+    counts[question.dimension] += 1;
+  });
+
+  return dimensions
+    .map((dimension) => ({
+      key: dimension.key,
+      average: counts[dimension.key]
+        ? scores[dimension.key] / counts[dimension.key]
+        : 0,
+      count: counts[dimension.key],
+    }))
+    .sort((a, b) => b.average - a.average || a.count - b.count);
+}
+
+function selectNextQuestion(
+  selectedQuestions: Question[],
+  selectedAnswers: (number | null)[],
+) {
+  const usedIds = new Set(selectedQuestions.map((question) => question.id));
+  const candidates = questionBank.filter((question) => !usedIds.has(question.id));
+  const summary = summarizeAnswers(selectedQuestions, selectedAnswers);
+  const adaptiveStep = selectedQuestions.length - SCREENING_QUESTIONS;
+  const [first, second, third] = summary;
+
+  let focusKeys = [first.key, second.key, third.key];
+
+  if (Math.abs(first.average - second.average) <= 0.35) {
+    focusKeys = [first.key, second.key];
+  }
+
+  if (adaptiveStep % 5 === 4) {
+    focusKeys = summary
+      .filter((item) => item.average >= 3.2)
+      .sort((a, b) => a.count - b.count || b.average - a.average)
+      .slice(0, 3)
+      .map((item) => item.key);
+  }
+
+  const focusedCandidates = candidates.filter((question) =>
+    focusKeys.includes(question.dimension),
+  );
+  const pool = focusedCandidates.length ? focusedCandidates : candidates;
+
+  return [...pool].sort((a, b) => {
+    const aSummary = summary.find((item) => item.key === a.dimension);
+    const bSummary = summary.find((item) => item.key === b.dimension);
+    return (
+      (aSummary?.count || 0) - (bSummary?.count || 0) ||
+      (bSummary?.average || 0) - (aSummary?.average || 0) ||
+      a.id - b.id
+    );
+  })[0];
+}
 
 const optionValues = [
   { label: "非常符合", value: 5 },
@@ -280,17 +734,19 @@ const recommendedTests = [
 export default function Home() {
   const [view, setView] = useState<"home" | "quiz" | "report">("home");
   const [current, setCurrent] = useState(0);
+  const [activeQuestions, setActiveQuestions] =
+    useState<Question[]>(initialQuestions);
   const [answers, setAnswers] = useState<(number | null)[]>(
-    Array(questions.length).fill(null),
+    Array(TOTAL_QUESTIONS).fill(null),
   );
   const [result, setResult] = useState<Result | null>(null);
   const [toast, setToast] = useState("");
 
-  const currentQuestion = questions[current];
+  const currentQuestion = activeQuestions[current];
   const currentDimension = dimensions.find(
     (dimension) => dimension.key === currentQuestion.dimension,
   )!;
-  const progress = ((current + 1) / questions.length) * 100;
+  const progress = ((current + 1) / TOTAL_QUESTIONS) * 100;
 
   const top = result?.ranked[0];
   const second = result?.ranked[1];
@@ -386,15 +842,27 @@ export default function Home() {
     const scores = Object.fromEntries(
       dimensions.map((dimension) => [dimension.key, 0]),
     );
-    questions.forEach((question, index) => {
-      scores[question.dimension] += answers[index] || 0;
+    const counts = Object.fromEntries(
+      dimensions.map((dimension) => [dimension.key, 0]),
+    );
+
+    activeQuestions.forEach((question, index) => {
+      const answer = answers[index];
+      if (answer === null || answer === undefined) return;
+      scores[question.dimension] += answer;
+      counts[question.dimension] += 1;
     });
     const ranked = dimensions
-      .map((dimension) => ({
-        ...dimension,
-        score: scores[dimension.key],
-        percent: Math.round((scores[dimension.key] / 20) * 100),
-      }))
+      .map((dimension) => {
+        const average = counts[dimension.key]
+          ? scores[dimension.key] / counts[dimension.key]
+          : 0;
+        return {
+          ...dimension,
+          score: Math.round((average / 5) * 20),
+          percent: Math.round((average / 5) * 100),
+        };
+      })
       .sort((a, b) => b.score - a.score);
     return { createdAt: new Date().toISOString(), ranked };
   }
@@ -404,8 +872,8 @@ export default function Home() {
       setToast("先选择一个答案");
       return;
     }
-    if (current === questions.length - 1) {
-      if (answers.some((answer) => answer === null)) {
+    if (current === TOTAL_QUESTIONS - 1) {
+      if (answers.slice(0, TOTAL_QUESTIONS).some((answer) => answer === null)) {
         setToast("还有题目没有完成");
         return;
       }
@@ -415,13 +883,20 @@ export default function Home() {
       setView("report");
       return;
     }
+
+    if (current === activeQuestions.length - 1) {
+      const nextQuestionItem = selectNextQuestion(activeQuestions, answers);
+      setActiveQuestions((questions) => [...questions, nextQuestionItem]);
+    }
+
     setCurrent((value) => value + 1);
   }
 
   function resetDemo() {
     window.localStorage.removeItem(STORAGE_KEY);
     setResult(null);
-    setAnswers(Array(questions.length).fill(null));
+    setActiveQuestions(initialQuestions);
+    setAnswers(Array(TOTAL_QUESTIONS).fill(null));
     setCurrent(0);
     setView("home");
     setToast("已清除演示结果");
@@ -496,7 +971,7 @@ export default function Home() {
                   <span>天赋测试</span>
                 </div>
                 <div className="progress-copy">
-                  答题进度 {current + 1} / {questions.length}
+                  答题进度 {current + 1} / {TOTAL_QUESTIONS}
                 </div>
               </div>
               <div className="progress-track">
@@ -541,7 +1016,7 @@ export default function Home() {
                   disabled={answers[current] === null}
                   onClick={nextQuestion}
                 >
-                  {current === questions.length - 1 ? "生成报告" : "下一题 →"}
+                  {current === TOTAL_QUESTIONS - 1 ? "生成报告" : "下一题 →"}
                 </button>
               </div>
             </div>

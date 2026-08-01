@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "title": "Luckora | Plataforma de autodescubrimiento con IA",
+    "description": "Descubre tu universo interior con tests de IA para talentos ocultos, personalidad, fortalezas y potencial futuro.",
+    "keywords": "autodescubrimiento con IA, test de talento oculto, test de personalidad, potencial futuro, universo interior, Luckora"
+  },
+  "nav": {
+    "tests": "Tests",
+    "vision": "Visión",
+    "insights": "Insights",
+    "start": "Empezar"
+  },
+  "hero": {
+    "eyebrow": "Plataforma de autodescubrimiento con IA",
+    "title": "Descubre El Universo Dentro De Ti",
+    "subtitle": "Autodescubrimiento impulsado por IA. Revela tus talentos ocultos, personalidad y potencial futuro.",
+    "cta": "Inicia Tu Viaje",
+    "secondary": "Explorar visión",
+    "orbLabel": "Descúbrete a través de las señales silenciosas de tu universo interior.",
+    "signal": "Luz interior despertando"
+  },
+  "cards": [
+    {
+      "title": "Discover Your Talent",
+      "subtitle": "Descubre tu talento oculto",
+      "description": "Mapea las fortalezas que ya influyen en cómo aprendes, creas y decides."
+    },
+    {
+      "title": "Understand Yourself",
+      "subtitle": "Explora tu verdadero yo",
+      "description": "Convierte sentimientos dispersos en patrones claros y útiles."
+    },
+    {
+      "title": "Future You",
+      "subtitle": "Tu futuro en la era de la IA",
+      "description": "Encuentra direcciones de crecimiento alineadas con tu energía y potencial."
+    }
+  ],
+  "seo": {
+    "title": "Una nueva experiencia de autodescubrimiento con IA",
+    "body": "Luckora está diseñada para personas que buscan tests de talento oculto, personalidad, dirección profesional, potencial futuro y herramientas de autodescubrimiento. La plataforma combinará tests ligeros, reportes generados por IA y guías multilingües."
+  },
+  "testEntry": {
+    "eyebrow": "Entrada al viaje",
+    "title": "Tu primer viaje Luckora se está preparando",
+    "body": "Esta página queda reservada para el futuro flujo de evaluación. El primer test público explorará talentos ocultos, patrones de personalidad y dirección de crecimiento en la era de la IA.",
+    "primary": "Volver al inicio",
+    "status": "La lógica del test aún no está activa",
+    "items": [
+      "Preguntas adaptativas",
+      "Reporte personal con estilo IA",
+      "Una sola realización con resultado guardado"
+    ]
+  },
+  "reportEntry": {
+    "eyebrow": "Reporte IA",
+    "title": "Tu futura experiencia de reporte vivirá aquí",
+    "body": "Luckora convertirá las respuestas en un reporte elegante de autodescubrimiento con IA. Por ahora, esta página queda reservada para la siguiente fase.",
+    "primary": "Volver al inicio"
+  },
+  "profileEntry": {
+    "eyebrow": "Perfil",
+    "title": "Tu perfil de universo interior llegará más adelante",
+    "body": "Esta página queda reservada para un futuro perfil personal con insights, reportes y señales de crecimiento.",
+    "primary": "Volver al inicio"
+  },
+  "language": {
+    "label": "Elegir idioma"
+  }
+}

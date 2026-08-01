@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "title": "Luckora 幸运小宇宙 | AI 自我探索平台",
+    "description": "通过 AI 自我探索测试发现隐藏天赋、人格特质、内在优势与未来潜力。",
+    "keywords": "AI自我探索,隐藏天赋测试,人格测试,未来潜力测试,幸运小宇宙,Luckora"
+  },
+  "nav": {
+    "tests": "测试",
+    "vision": "愿景",
+    "insights": "洞察",
+    "start": "开始"
+  },
+  "hero": {
+    "eyebrow": "AI 自我探索平台",
+    "title": "探索隐藏在你体内的小宇宙",
+    "subtitle": "用 AI 探索你的隐藏天赋、人格特质与未来潜力。",
+    "cta": "开启探索旅程",
+    "secondary": "了解愿景",
+    "orbLabel": "通过内在宇宙的微弱信号，重新发现你自己。",
+    "signal": "内在光芒正在苏醒"
+  },
+  "cards": [
+    {
+      "title": "Discover Your Talent",
+      "subtitle": "发现隐藏天赋",
+      "description": "看见那些已经影响你学习、创作与选择的优势模式。"
+    },
+    {
+      "title": "Understand Yourself",
+      "subtitle": "探索真实自我",
+      "description": "把零散感受整理成清晰画像，让你更理解自己。"
+    },
+    {
+      "title": "Future You",
+      "subtitle": "AI时代未来方向",
+      "description": "找到更符合能量、人格和长期潜力的成长方向。"
+    }
+  ],
+  "seo": {
+    "title": "一种新的 AI 自我探索体验",
+    "body": "Luckora 幸运小宇宙面向正在寻找隐藏天赋测试、人格洞察、职业方向、未来潜力和自我探索工具的人。未来平台将结合轻量测试、AI 报告和多语言内容，服务全球用户。"
+  },
+  "testEntry": {
+    "eyebrow": "探索入口",
+    "title": "你的第一次 Luckora 旅程正在准备中",
+    "body": "这里会作为未来测试流程入口。第一款公开测试将围绕隐藏天赋、人格模式和 AI 时代成长方向展开。",
+    "primary": "返回首页",
+    "status": "测试逻辑暂未开启",
+    "items": [
+      "自适应题目",
+      "AI 风格个人报告",
+      "一次完成，结果长期保留"
+    ]
+  },
+  "reportEntry": {
+    "eyebrow": "AI 报告",
+    "title": "未来的 AI 报告体验会放在这里",
+    "body": "Luckora 会把用户回答转化成高级、清晰的 AI 自我探索报告。当前页面先作为下一阶段预留。",
+    "primary": "返回首页"
+  },
+  "profileEntry": {
+    "eyebrow": "用户画像",
+    "title": "你的内在宇宙画像会在之后上线",
+    "body": "这里将用于保存用户的洞察、报告和成长信号。当前先作为未来用户系统入口预留。",
+    "primary": "返回首页"
+  },
+  "language": {
+    "label": "选择语言"
+  }
+}

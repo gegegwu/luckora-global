@@ -346,6 +346,211 @@ export const seoLandingPages: SeoLandingPage[] = [
       },
     ],
   },
+  {
+    path: "/enneagram-test",
+    eyebrow: "Enneagram Test",
+    title: "Enneagram Test - Discover Your Personality Type",
+    metadataTitle: "Enneagram Test - Discover Your Personality Type",
+    description:
+      "Explore core personality patterns, motivation and behavior tendencies with Luckora's AI self discovery test.",
+    ctaLabel: "Discover My Type",
+    ctaPath: "/tests/personality-test",
+    sections: [
+      {
+        title: "What is an Enneagram test?",
+        body: "An Enneagram test is a personality reflection tool that helps people explore core motivations, emotional patterns and recurring behavior tendencies. Luckora is not an official Enneagram assessment, but this page helps users looking for Enneagram-style insight begin with a thoughtful AI self discovery test.",
+      },
+      {
+        title: "How does an Enneagram-style test work?",
+        body: "A test asks questions about what drives your choices, how you respond to stress and what patterns appear in relationships or work. Luckora maps your answers into a personality identity that explains strengths, growth challenges and possible career direction in simple language.",
+      },
+      {
+        title: "Why understand your core personality pattern?",
+        body: "Understanding your core pattern can help you notice why certain situations energize you while others create pressure. It can also give you language for motivation, blind spots and personal growth without treating personality as a fixed label.",
+      },
+    ],
+    faq: [
+      {
+        question: "Is Luckora an official Enneagram test?",
+        answer:
+          "No. Luckora is an AI self discovery platform and does not provide an official Enneagram assessment or certification.",
+      },
+      {
+        question: "Can this test help me understand my personality type?",
+        answer:
+          "Yes. Luckora can help you reflect on personality patterns, strengths, motivations and growth direction.",
+      },
+      {
+        question: "Is this test a psychological diagnosis?",
+        answer:
+          "No. The test is for self discovery and personal reflection, not medical, psychiatric or clinical diagnosis.",
+      },
+    ],
+  },
+  {
+    path: "/emotional-intelligence-test",
+    eyebrow: "Emotional Intelligence Test",
+    title: "Emotional Intelligence Test - Understand Your EQ",
+    metadataTitle: "Emotional Intelligence Test - Understand Your EQ",
+    description:
+      "Reflect on emotional awareness, communication style and relationship skills with Luckora's AI self discovery test.",
+    ctaLabel: "Explore My EQ",
+    ctaPath: "/tests/personality-test",
+    sections: [
+      {
+        title: "What is an emotional intelligence test?",
+        body: "An emotional intelligence test helps you reflect on how you recognize emotions, communicate under pressure and respond to other people's feelings. Luckora uses personality signals to support self awareness around emotional patterns and relationship behavior.",
+      },
+      {
+        title: "How does an EQ test work?",
+        body: "Most EQ-style tests ask questions about emotional recognition, conflict response, empathy and communication habits. Luckora's current AI personality test gives a broader self discovery result that can still reveal useful clues about emotional awareness and interpersonal strengths.",
+      },
+      {
+        title: "Why understand your emotional intelligence?",
+        body: "Emotional intelligence can shape relationships, leadership, teamwork and personal growth. Understanding your EQ-related patterns can help you communicate more clearly, notice triggers earlier and build healthier ways to connect with others.",
+      },
+    ],
+    faq: [
+      {
+        question: "Does Luckora measure my exact EQ score?",
+        answer:
+          "No. Luckora does not claim to provide a certified EQ score. It is a self discovery tool for reflecting on emotional and personality patterns.",
+      },
+      {
+        question: "Can emotional intelligence improve?",
+        answer:
+          "Yes. Many emotional skills, such as listening, self awareness and communication, can improve with practice and reflection.",
+      },
+      {
+        question: "Is the emotional intelligence test free?",
+        answer:
+          "Luckora's current AI personality test is free and can be used as a starting point for EQ-related self reflection.",
+      },
+    ],
+  },
+  {
+    path: "/iq-test",
+    eyebrow: "IQ Test",
+    title: "IQ Test - Explore Your Cognitive Strengths",
+    metadataTitle: "IQ Test - Explore Your Cognitive Strengths",
+    description:
+      "Explore logic, problem solving and cognitive strengths with Luckora's self discovery approach. This is not a certified IQ assessment.",
+    ctaLabel: "Explore My Strengths",
+    ctaPath: "/tests/personality-test",
+    sections: [
+      {
+        title: "What is an IQ test?",
+        body: "An IQ test usually refers to an assessment of cognitive ability, including reasoning, logic and problem solving. Luckora does not provide a professional IQ certification. This page is designed for users who want to explore cognitive strengths as part of self discovery.",
+      },
+      {
+        title: "How does a cognitive strengths test work?",
+        body: "A cognitive self discovery test looks at how you approach problems, patterns, decisions and learning. Luckora's current personality test helps identify whether you naturally lean toward creation, analysis, connection or leadership momentum.",
+      },
+      {
+        title: "Why understand your cognitive style?",
+        body: "Understanding your cognitive style can help you choose better learning strategies, work roles and personal growth goals. A self discovery result should support reflection, not define your intelligence or limit your future.",
+      },
+    ],
+    faq: [
+      {
+        question: "Is this a certified IQ test?",
+        answer:
+          "No. Luckora does not provide a certified IQ score or professional cognitive assessment.",
+      },
+      {
+        question: "Can Luckora help me explore cognitive strengths?",
+        answer:
+          "Yes. Luckora can help you reflect on thinking patterns, problem solving style and strengths related to personality.",
+      },
+      {
+        question: "Should I use this for school or medical decisions?",
+        answer:
+          "No. For formal educational, clinical or professional evaluation, use a qualified assessment provider.",
+      },
+    ],
+  },
+  {
+    path: "/leadership-test",
+    eyebrow: "Leadership Test",
+    title: "Leadership Test - Discover Your Leadership Style",
+    metadataTitle: "Leadership Test - Discover Your Leadership Style",
+    description:
+      "Discover decision style, teamwork patterns and leadership strengths with Luckora's AI self discovery test.",
+    ctaLabel: "Discover My Style",
+    ctaPath: "/tests/personality-test",
+    sections: [
+      {
+        title: "What is a leadership test?",
+        body: "A leadership test helps you reflect on how you make decisions, support teams, handle pressure and influence momentum. Luckora connects leadership style with broader personality patterns rather than treating leadership as one single fixed trait.",
+      },
+      {
+        title: "How does a leadership style test work?",
+        body: "Leadership-style questions often explore decision making, communication, conflict response and motivation. Luckora's AI personality test maps your answers into a result that includes strengths, challenges and career alignment.",
+      },
+      {
+        title: "Why understand your leadership style?",
+        body: "Understanding your leadership style can help you work better with teams, choose roles that fit your natural strengths and notice where you may need more patience, clarity or follow-through.",
+      },
+    ],
+    faq: [
+      {
+        question: "Can this test tell me if I am a good leader?",
+        answer:
+          "No single online test can fully measure leadership ability. Luckora helps you reflect on leadership style and growth direction.",
+      },
+      {
+        question: "Is leadership only for managers?",
+        answer:
+          "No. Leadership can show up in projects, communities, creative work, relationships and everyday decision making.",
+      },
+      {
+        question: "Is the leadership test free?",
+        answer:
+          "Luckora's current AI personality test is free and includes signals related to leadership and action style.",
+      },
+    ],
+  },
+  {
+    path: "/dark-personality-test",
+    eyebrow: "Dark Personality Test",
+    title: "Dark Personality Test - Explore Your Personality Traits",
+    metadataTitle: "Dark Personality Test - Explore Your Personality Traits",
+    description:
+      "Explore complex personality traits, behavior tendencies and growth patterns with Luckora's reflective self discovery test.",
+    ctaLabel: "Explore My Traits",
+    ctaPath: "/tests/personality-test",
+    sections: [
+      {
+        title: "What is a dark personality test?",
+        body: "A dark personality test is commonly searched by people who want to understand more complex traits, such as control, competition, emotional distance or self protection. Luckora avoids negative labels and uses this topic as a starting point for careful self reflection.",
+      },
+      {
+        title: "How does a dark traits test work?",
+        body: "A reflective personality test asks about choices, reactions and behavior tendencies. Luckora's current test does not diagnose disorders or label users as bad. It helps identify patterns that may influence communication, decision making and growth.",
+      },
+      {
+        title: "Why understand difficult personality traits?",
+        body: "Everyone has traits that can become challenging under stress. Understanding those patterns can support better self awareness, healthier relationships and more intentional personal growth without shame or fear-based labeling.",
+      },
+    ],
+    faq: [
+      {
+        question: "Does Luckora diagnose dark personality disorders?",
+        answer:
+          "No. Luckora does not diagnose mental health conditions, personality disorders or clinical issues.",
+      },
+      {
+        question: "Will this test give me a negative label?",
+        answer:
+          "No. Luckora is designed for reflective self discovery and avoids using harmful or fixed labels.",
+      },
+      {
+        question: "Can understanding difficult traits be useful?",
+        answer:
+          "Yes. Reflecting on challenging patterns can help people improve communication, boundaries and decision making.",
+      },
+    ],
+  },
 ];
 
 export function getSeoLandingPage(path: string) {

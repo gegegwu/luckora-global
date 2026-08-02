@@ -34,6 +34,31 @@ const seoEntryLinks = [
     label: "Introvert Test",
     text: "Discover your social energy and introvert traits.",
   },
+  {
+    href: "/enneagram-test",
+    label: "Enneagram Test",
+    text: "Reflect on core motivations and personality patterns.",
+  },
+  {
+    href: "/emotional-intelligence-test",
+    label: "Emotional Intelligence Test",
+    text: "Understand EQ, communication and relationship signals.",
+  },
+  {
+    href: "/iq-test",
+    label: "IQ Test",
+    text: "Explore cognitive strengths without professional score claims.",
+  },
+  {
+    href: "/leadership-test",
+    label: "Leadership Test",
+    text: "Discover decision style, teamwork and leadership patterns.",
+  },
+  {
+    href: "/dark-personality-test",
+    label: "Dark Personality Test",
+    text: "Explore complex traits without diagnosis or negative labels.",
+  },
 ];
 
 export default function Home() {

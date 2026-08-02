@@ -879,8 +879,8 @@ button {
 }
 
 .discovery-paths-section {
-  margin-top: 18px;
-  padding: 8px 0 10px;
+  margin-top: 34px;
+  padding: 22px 0 16px;
 }
 
 .discovery-paths-header {
@@ -909,17 +909,17 @@ button {
 
 .discovery-paths-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 18px;
 }
 
 .discovery-path {
   position: relative;
   overflow: hidden;
-  min-height: 390px;
+  min-height: 430px;
   border: 1px solid var(--line);
   border-radius: 36px;
-  padding: 34px;
+  padding: 42px;
   background:
     radial-gradient(circle at 76% 18%, rgba(244, 201, 107, 0.18), transparent 34%),
     radial-gradient(circle at 12% 88%, rgba(125, 232, 255, 0.13), transparent 32%),
@@ -927,6 +927,7 @@ button {
   color: inherit;
   box-shadow: 0 30px 90px rgba(0, 0, 0, 0.22);
   backdrop-filter: blur(20px);
+  isolation: isolate;
   transition:
     border-color 180ms ease,
     transform 180ms ease,
@@ -935,9 +936,10 @@ button {
 
 .discovery-path-love {
   background:
-    radial-gradient(circle at 74% 20%, rgba(255, 145, 190, 0.24), transparent 34%),
-    radial-gradient(circle at 12% 86%, rgba(244, 201, 107, 0.13), transparent 30%),
-    linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.045));
+    radial-gradient(circle at 74% 20%, rgba(255, 145, 190, 0.28), transparent 32%),
+    radial-gradient(circle at 16% 86%, rgba(244, 201, 107, 0.15), transparent 30%),
+    radial-gradient(circle at 90% 88%, rgba(125, 232, 255, 0.11), transparent 24%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.045));
 }
 
 .discovery-path::after {
@@ -974,6 +976,7 @@ button {
   min-height: 322px;
   flex-direction: column;
   align-items: flex-start;
+  max-width: 540px;
 }
 
 .discovery-path-icon {
@@ -1005,16 +1008,16 @@ button {
 .discovery-path h3 {
   margin: 18px 0 0;
   color: #fff;
-  font-size: clamp(34px, 4vw, 58px);
+  font-size: clamp(46px, 6vw, 86px);
   line-height: 0.96;
   letter-spacing: -0.06em;
 }
 
 .discovery-path p {
-  max-width: 380px;
+  max-width: 500px;
   margin: 18px 0 0;
   color: var(--muted);
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.65;
 }
 
@@ -1032,10 +1035,10 @@ button {
 
 .discovery-path-orb {
   position: absolute;
-  right: 42px;
-  bottom: 34px;
-  width: 170px;
-  height: 170px;
+  right: 72px;
+  bottom: 44px;
+  width: 230px;
+  height: 230px;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 50%;
   background:

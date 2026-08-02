@@ -88,14 +88,6 @@ const seoEntryLinks = [
 
 const discoveryPaths = [
   {
-    title: "Personality Test",
-    icon: "🌌",
-    description: "Discover your hidden traits and inner patterns.",
-    href: "/test",
-    source: "homepage_discovery_personality",
-    accent: "cosmic",
-  },
-  {
     title: "Love Language Test",
     icon: "❤️",
     description: "Understand your emotional connection style.",
@@ -212,10 +204,10 @@ export default function Home() {
         <div className="discovery-paths-header">
           <span className="eyebrow">Discovery Paths</span>
           <div>
-            <h2>Choose the universe you want to explore.</h2>
+            <h2>Continue into the language of connection.</h2>
             <p>
-              Luckora begins with two focused self discovery journeys: your
-              inner identity and the way your heart connects.
+              After personality, explore how you give love, receive affection
+              and build emotional closeness.
             </p>
           </div>
         </div>

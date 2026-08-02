@@ -86,14 +86,14 @@ const seoEntryLinks = [
   },
 ];
 
-const featuredTests = [
+const discoveryPaths = [
   {
     title: "Personality Test",
     icon: "🌌",
     description: "Discover your personality traits and hidden potential.",
     href: "/test",
     status: "available",
-    source: "homepage_featured_personality",
+    source: "homepage_discovery_personality",
   },
   {
     title: "Love Language Test",
@@ -101,7 +101,7 @@ const featuredTests = [
     description: "Understand how you give and receive love.",
     href: "/love-language-test",
     status: "available",
-    source: "homepage_featured_love_language",
+    source: "homepage_discovery_love_language",
   },
   {
     title: "Strengths Test",
@@ -109,7 +109,7 @@ const featuredTests = [
     description: "Discover your natural strengths and abilities.",
     href: "/tests/strengths-test",
     status: "coming-soon",
-    source: "homepage_featured_strengths",
+    source: "homepage_discovery_strengths",
   },
   {
     title: "Career Personality Test",
@@ -117,7 +117,7 @@ const featuredTests = [
     description: "Explore your ideal career direction.",
     href: "/tests/career-test",
     status: "coming-soon",
-    source: "homepage_featured_career",
+    source: "homepage_discovery_career",
   },
 ];
 
@@ -198,12 +198,12 @@ export default function Home() {
           <div className="hero-actions">
             <motion.a
               className="primary-action"
-              href="/tests/personality-test"
-              onClick={() => trackStartTestClick("homepage_hero")}
+              href="/test"
+              onClick={() => trackStartTestClick("homepage_hero_personality")}
               whileHover={{ scale: 1.025 }}
               whileTap={{ scale: 0.98 }}
             >
-              <span>{dictionary.hero.cta}</span>
+              <span>Start Personality Test</span>
             </motion.a>
             <a className="secondary-action" href="#vision">
               {dictionary.hero.secondary}
@@ -224,47 +224,48 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <section className="featured-tests-section" id="tests">
-        <div className="section-heading">
-          <span className="eyebrow">AI Self Discovery Tests</span>
-          <h2>Choose Your Discovery Test</h2>
-          <p>
-            Start with a free test and let Luckora turn your answers into a
-            clearer self discovery profile.
-          </p>
+      <section className="discovery-paths-section" id="tests">
+        <div className="discovery-paths-header">
+          <span className="eyebrow">Discovery Paths</span>
+          <div>
+            <h2>Explore what Luckora can reveal.</h2>
+            <p>
+              Start with personality today, then follow relationship, strengths
+              and career paths as the platform grows.
+            </p>
+          </div>
         </div>
 
-        <div className="featured-tests-grid">
-          {featuredTests.map((test, index) => {
-            const isAvailable = test.status === "available";
+        <div className="discovery-paths-grid">
+          {discoveryPaths.map((path, index) => {
+            const isAvailable = path.status === "available";
 
             return (
-              <motion.article
-                className={`featured-test-card${isAvailable ? "" : " is-coming-soon"}`}
+              <motion.a
+                aria-label={`${path.title} ${isAvailable ? "available" : "coming soon"}`}
+                className={`discovery-path${isAvailable ? "" : " is-coming-soon"}`}
+                href={path.href}
                 initial={false}
-                key={test.title}
-                transition={{ delay: 0.08 * index, duration: 0.42 }}
+                key={path.title}
+                onClick={() => {
+                  if (isAvailable) {
+                    trackStartTestClick(path.source);
+                  }
+                }}
+                transition={{ delay: 0.05 * index, duration: 0.35 }}
                 viewport={{ once: true }}
+                whileHover={{ y: isAvailable ? -2 : 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
               >
-                <div className="featured-test-topline">
-                  <span>{test.icon}</span>
-                  <small>{isAvailable ? "Available" : "Coming Soon"}</small>
+                <span className="discovery-path-icon">{path.icon}</span>
+                <div>
+                  <div className="discovery-path-topline">
+                    <h3>{path.title}</h3>
+                    <small>{isAvailable ? "Open" : "Coming Soon"}</small>
+                  </div>
+                  <p>{path.description}</p>
                 </div>
-                <h3>{test.title}</h3>
-                <p>{test.description}</p>
-                {isAvailable ? (
-                  <a
-                    className="featured-test-action"
-                    href={test.href}
-                    onClick={() => trackStartTestClick(test.source)}
-                  >
-                    Start Test
-                  </a>
-                ) : (
-                  <span className="featured-test-disabled">Coming Soon</span>
-                )}
-              </motion.article>
+              </motion.a>
             );
           })}
         </div>

@@ -22,6 +22,9 @@ export function LoveLanguageResultCard({
   const shareText = `I discovered my Love Language: ${result.name}. ${result.meaning}`;
   const encodedShareText = encodeURIComponent(shareText);
   const encodedShareUrl = encodeURIComponent(shareUrl);
+  const sortedScores = (Object.entries(result.scores) as Array<
+    [LoveLanguageType, number]
+  >).sort((a, b) => b[1] - a[1]);
 
   async function shareResult() {
     if (navigator.share) {
@@ -45,8 +48,12 @@ export function LoveLanguageResultCard({
     >
       <div className="result-hero">
         <div>
-          <span className="eyebrow love-eyebrow">Your Love Language ♡</span>
+          <span className="eyebrow love-eyebrow">❤️ Your Emotional Connection Style</span>
           <h1>{result.name}</h1>
+          <div className="love-result-tags">
+            <span>Your Love Language</span>
+            <span>Your Love Style</span>
+          </div>
           <strong>{result.title}</strong>
           <p className="emotional-line">{result.meaning}</p>
         </div>
@@ -58,14 +65,21 @@ export function LoveLanguageResultCard({
       <div className="result-section">
         <h2>Your Love Style</h2>
         <div className="profile-score-list">
-          {(Object.entries(result.scores) as Array<[LoveLanguageType, number]>).map(
+          {sortedScores.map(
             ([type, score]) => {
               const value = percent(score, total);
+              const isPrimary = type === result.type;
 
               return (
-                <div className="profile-score" key={type}>
+                <div
+                  className={`profile-score${isPrimary ? " love-primary-score" : ""}`}
+                  key={type}
+                >
                   <div>
-                    <span>{loveLanguageLabels[type]}</span>
+                    <span>
+                      {isPrimary ? "❤️ " : ""}
+                      {loveLanguageLabels[type]}
+                    </span>
                     <strong>{value}%</strong>
                   </div>
                   <i>
@@ -153,6 +167,19 @@ export function LoveLanguageResultCard({
             </a>
           </div>
         </div>
+      </div>
+
+      <div className="result-section love-report-upgrade">
+        <span>Future Premium Report</span>
+        <h2>Want a deeper understanding of your relationship style?</h2>
+        <p>
+          Unlock your full AI Love Report to explore emotional patterns,
+          relationship needs, communication habits and growth prompts in more
+          depth.
+        </p>
+        <a aria-disabled="true" href="#love-report-coming-soon">
+          Unlock your full AI Love Report
+        </a>
       </div>
 
       <div className="result-actions">

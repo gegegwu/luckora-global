@@ -1307,6 +1307,22 @@ button {
   animation-delay: 5.4s;
 }
 
+.heart-f {
+  top: 10%;
+  left: 18%;
+  color: rgba(255, 191, 208, 0.36);
+  font-size: clamp(18px, 2.6vw, 34px);
+  animation-delay: 2.6s;
+}
+
+.heart-g {
+  top: 12%;
+  right: 18%;
+  color: rgba(255, 191, 208, 0.32);
+  font-size: clamp(16px, 2.4vw, 30px);
+  animation-delay: 6.2s;
+}
+
 .love-eyebrow {
   border-color: rgba(255, 143, 183, 0.24);
   color: #ffd8e4;
@@ -1399,6 +1415,66 @@ button {
     radial-gradient(circle at 45% 35%, rgba(255, 255, 255, 0.55), transparent 7%),
     radial-gradient(circle at 50% 50%, rgba(255, 155, 178, 0.2), transparent 34%),
     linear-gradient(135deg, rgba(244, 201, 107, 0.2), rgba(255, 117, 153, 0.18));
+}
+
+.love-result-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: -10px 0 20px;
+}
+
+.love-result-tags span {
+  border: 1px solid rgba(255, 191, 208, 0.22);
+  border-radius: 999px;
+  padding: 9px 12px;
+  color: rgba(255, 232, 177, 0.92);
+  background: rgba(255, 143, 183, 0.08);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.love-primary-score {
+  border-color: rgba(255, 191, 208, 0.34);
+  background:
+    radial-gradient(circle at 10% 20%, rgba(255, 143, 183, 0.15), transparent 34%),
+    rgba(255, 255, 255, 0.075);
+  box-shadow: 0 16px 42px rgba(255, 143, 183, 0.08);
+}
+
+.love-report-upgrade {
+  overflow: hidden;
+  border: 1px solid rgba(255, 191, 208, 0.22);
+  border-radius: 30px;
+  padding: clamp(22px, 4vw, 34px);
+  background:
+    radial-gradient(circle at 84% 16%, rgba(255, 143, 183, 0.2), transparent 28%),
+    radial-gradient(circle at 12% 88%, rgba(244, 201, 107, 0.13), transparent 34%),
+    rgba(255, 255, 255, 0.055);
+}
+
+.love-report-upgrade > span {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.love-report-upgrade h2 {
+  max-width: 760px;
+  margin-top: 12px;
+}
+
+.love-report-upgrade a {
+  display: inline-flex;
+  margin-top: 20px;
+  border-radius: 999px;
+  padding: 14px 18px;
+  color: #130719;
+  background: linear-gradient(135deg, #fff2f7, var(--love-rose), var(--gold));
+  font-weight: 950;
+  box-shadow: 0 18px 40px rgba(255, 143, 183, 0.12);
 }
 
 .result-card strong {

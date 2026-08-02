@@ -86,6 +86,59 @@ const seoEntryLinks = [
   },
 ];
 
+const featuredTests = [
+  {
+    title: "Personality Test",
+    icon: "🌌",
+    description: "Discover your personality traits and hidden potential.",
+    href: "/test",
+    status: "available",
+    source: "homepage_featured_personality",
+  },
+  {
+    title: "Love Language Test",
+    icon: "❤️",
+    description: "Understand how you give and receive love.",
+    href: "/love-language-test",
+    status: "available",
+    source: "homepage_featured_love_language",
+  },
+  {
+    title: "Strengths Test",
+    icon: "✨",
+    description: "Discover your natural strengths and abilities.",
+    href: "/tests/strengths-test",
+    status: "coming-soon",
+    source: "homepage_featured_strengths",
+  },
+  {
+    title: "Career Personality Test",
+    icon: "💼",
+    description: "Explore your ideal career direction.",
+    href: "/tests/career-test",
+    status: "coming-soon",
+    source: "homepage_featured_career",
+  },
+];
+
+const howSteps = [
+  {
+    label: "Choose",
+    title: "Pick a discovery path",
+    text: "Start with personality, love language or future self discovery tests.",
+  },
+  {
+    label: "Answer",
+    title: "Follow short instinctive questions",
+    text: "Each test is designed to feel lightweight, reflective and easy to finish.",
+  },
+  {
+    label: "Reflect",
+    title: "Read your AI-style report",
+    text: "Get a clear result with strengths, patterns and next-step guidance.",
+  },
+];
+
 export default function Home() {
   const locale = "en";
   const dictionary = useMemo(() => getDictionary(locale), [locale]);
@@ -171,7 +224,69 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <section className="feature-grid" id="tests">
+      <section className="featured-tests-section" id="tests">
+        <div className="section-heading">
+          <span className="eyebrow">AI Self Discovery Tests</span>
+          <h2>Choose Your Discovery Test</h2>
+          <p>
+            Start with a free test and let Luckora turn your answers into a
+            clearer self discovery profile.
+          </p>
+        </div>
+
+        <div className="featured-tests-grid">
+          {featuredTests.map((test, index) => {
+            const isAvailable = test.status === "available";
+
+            return (
+              <motion.article
+                className={`featured-test-card${isAvailable ? "" : " is-coming-soon"}`}
+                initial={false}
+                key={test.title}
+                transition={{ delay: 0.08 * index, duration: 0.42 }}
+                viewport={{ once: true }}
+                whileInView={{ opacity: 1, y: 0 }}
+              >
+                <div className="featured-test-topline">
+                  <span>{test.icon}</span>
+                  <small>{isAvailable ? "Available" : "Coming Soon"}</small>
+                </div>
+                <h3>{test.title}</h3>
+                <p>{test.description}</p>
+                {isAvailable ? (
+                  <a
+                    className="featured-test-action"
+                    href={test.href}
+                    onClick={() => trackStartTestClick(test.source)}
+                  >
+                    Start Test
+                  </a>
+                ) : (
+                  <span className="featured-test-disabled">Coming Soon</span>
+                )}
+              </motion.article>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="how-section">
+        <div className="section-heading compact">
+          <span className="eyebrow">How Luckora Works</span>
+          <h2>A simple path from question to insight</h2>
+        </div>
+        <div className="how-grid">
+          {howSteps.map((step, index) => (
+            <article key={step.title}>
+              <span>{String(index + 1).padStart(2, "0")} / {step.label}</span>
+              <h3>{step.title}</h3>
+              <p>{step.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="feature-grid" id="vision">
         {dictionary.cards.map((card, index) => (
           <motion.article
             className="feature-card"
@@ -189,7 +304,7 @@ export default function Home() {
         ))}
       </section>
 
-      <section className="seo-section" id="vision">
+      <section className="seo-section">
         <div>
           <span className="eyebrow">Luckora GEO / SEO Foundation</span>
           <h2>{dictionary.seo.title}</h2>
@@ -209,6 +324,16 @@ export default function Home() {
             Explore all Luckora tests
           </a>
         </div>
+      </section>
+
+      <section className="insights-section" id="insights">
+        <span className="eyebrow">Vision / Insights</span>
+        <h2>Built for long-term self discovery.</h2>
+        <p>
+          Luckora will keep expanding from personality and relationship tests
+          into strengths, career direction and future AI-powered reports.
+        </p>
+        <a href="/guides">Explore self discovery guides</a>
       </section>
 
       <script

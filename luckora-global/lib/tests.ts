@@ -28,23 +28,22 @@ export type TestConfig = {
 export const testConfigs: TestConfig[] = [
   {
     id: "personality",
-    title: "AI Personality Test",
+    title: "AI Personality Test - Discover Your True Personality",
     description:
-      "Discover your personality identity, core traits, hidden strengths, growth challenges and career alignment.",
+      "Take a free AI personality test online to discover your personality traits, emotional patterns, hidden strengths and growth potential.",
     slug: "personality-test",
     status: "available",
     icon: "✦",
     startPath: "/test",
-    seoTitle:
-      "Free AI Personality Test - Discover Your Personality Type | Luckora",
+    seoTitle: "AI Personality Test - Discover Your True Personality | Luckora",
     seoDescription:
-      "Take Luckora's free AI personality test to discover your personality type, hidden strengths, growth path and career direction.",
+      "Take Luckora's free AI personality test online to discover your personality traits, strengths, emotional patterns and hidden potential.",
     whatIsThis:
-      "The Luckora AI Personality Test is a self discovery assessment designed to help you understand who you are, what you are naturally good at and where you can grow next.",
+      "A personality test is an online self discovery assessment that helps you understand recurring patterns in how you think, feel, communicate and make decisions. Luckora's AI personality test turns your answers into a clear personality identity, making it easier to discover your personality and reflect on your true self.",
     howItWorks: [
-      "Answer 12 instinctive questions about how you think, create, connect and take action.",
-      "Luckora maps your strongest personality signal across creator, analyst, connector and leader patterns.",
-      "Your result becomes a cosmic identity report with strengths, challenges, career matches and growth direction.",
+      "Answer 12 instinctive questions in a free personality quiz about how you think, create, connect and take action.",
+      "Luckora maps your strongest personality signals across creator, analyst, connector and leader patterns.",
+      "Your AI personality test result becomes a cosmic identity report with traits, strengths, emotional patterns and growth direction.",
     ],
     discoveries: [
       "Your personality identity",
@@ -55,19 +54,24 @@ export const testConfigs: TestConfig[] = [
     ],
     faq: [
       {
-        question: "What is an AI personality test?",
+        question: "What is a personality test?",
         answer:
-          "An AI personality test analyzes your answers to provide personalized insight about your personality traits, strengths and behavior patterns.",
+          "A personality test is an online self discovery tool that helps you understand traits, preferences, behavior patterns and how you naturally respond to different situations.",
+      },
+      {
+        question: "How does an AI personality test work?",
+        answer:
+          "An AI personality test reviews your answers and maps them into a structured profile that explains your personality traits, strengths, emotional patterns and growth opportunities.",
       },
       {
         question: "Is this personality test free?",
         answer:
-          "Yes. The current Luckora AI Personality Test is free to complete and gives you a personality identity report.",
+          "Yes. Luckora currently offers a free personality test online and gives you a personality identity report without signup.",
       },
       {
-        question: "Is this test a medical or psychological diagnosis?",
+        question: "Why should you understand your personality?",
         answer:
-          "No. Luckora is designed for self discovery and personal reflection, not medical, psychiatric or clinical diagnosis.",
+          "Understanding your personality can help you make better decisions about relationships, career direction, personal growth and how to use your natural strengths.",
       },
       {
         question: "How long does the test take?",

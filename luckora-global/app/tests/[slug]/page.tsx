@@ -47,6 +47,8 @@ export default async function TestLandingPage({
     notFound();
   }
 
+  const isPersonalityTest = test.slug === "personality-test";
+
   return (
     <main className="site-shell test-shell">
       <StarField />
@@ -90,12 +92,20 @@ export default async function TestLandingPage({
         </div>
 
         <section className="result-section">
-          <h2>What is this test?</h2>
+          <h2>
+            {isPersonalityTest
+              ? "What is a personality test?"
+              : "What is this test?"}
+          </h2>
           <p>{test.whatIsThis}</p>
         </section>
 
         <section className="result-section">
-          <h2>How it works</h2>
+          <h2>
+            {isPersonalityTest
+              ? "How does AI personality test work?"
+              : "How it works"}
+          </h2>
           <div className="process-list">
             {test.howItWorks.map((step, index) => (
               <article key={step}>
@@ -107,7 +117,11 @@ export default async function TestLandingPage({
         </section>
 
         <section className="result-section">
-          <h2>What you will discover</h2>
+          <h2>
+            {isPersonalityTest
+              ? "Why should you understand your personality?"
+              : "What you will discover"}
+          </h2>
           <div className="strength-list">
             {test.discoveries.map((item) => (
               <span key={item}>{item}</span>
@@ -123,7 +137,7 @@ export default async function TestLandingPage({
         ))}
 
         <section className="result-section">
-          <h2>FAQ</h2>
+          <h2>Frequently Asked Questions</h2>
           <div className="faq-list">
             {test.faq.map((item) => (
               <article key={item.question}>

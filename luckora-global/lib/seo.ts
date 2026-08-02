@@ -9,9 +9,9 @@ export const siteConfig = {
   gaMeasurementId: "G-J43TQ7GEH6",
   googleSiteVerification: "FSjLrIC9U3X_n_Vx7j4WYbSLD4QYUlzn_iGaIL_b26s",
   ogImagePath: "/opengraph-image",
-  defaultTitle: "Luckora - AI Self Discovery Tests",
+  defaultTitle: "Luckora - AI Personality Test | Discover Your True Self",
   defaultDescription:
-    "Discover your personality, strengths, career direction and hidden potential with AI-powered self discovery tests.",
+    "Take a free AI personality test and discover your personality traits, strengths, emotional patterns, and hidden potential.",
   defaultKeywords: [
     "AI self discovery tests",
     "AI personality test",

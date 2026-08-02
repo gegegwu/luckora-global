@@ -73,6 +73,8 @@ function LoveLanguageTestContent() {
       <div aria-hidden="true" className="floating-heart heart-a">♡</div>
       <div aria-hidden="true" className="floating-heart heart-b">♡</div>
       <div aria-hidden="true" className="floating-heart heart-c">✦</div>
+      <div aria-hidden="true" className="floating-heart heart-d">♡</div>
+      <div aria-hidden="true" className="floating-heart heart-e">✧</div>
 
       <header className="nav">
         <a aria-label="Luckora home" className="logo" href="/">
@@ -110,6 +112,11 @@ function LoveLanguageTestContent() {
               Take a free relationship self discovery test to understand your
               primary love language, connection style and emotional needs.
             </p>
+            <div aria-hidden="true" className="love-signal-card">
+              <span>♡</span>
+              <i />
+              <small>Heart Signal Mapping</small>
+            </div>
             <div className="test-benefits">
               <span>Free</span>
               <span>Takes about 3 minutes</span>

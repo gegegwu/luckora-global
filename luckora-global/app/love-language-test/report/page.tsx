@@ -52,6 +52,8 @@ export default function LoveLanguageReportPage() {
       <div aria-hidden="true" className="floating-heart heart-a">♡</div>
       <div aria-hidden="true" className="floating-heart heart-b">♡</div>
       <div aria-hidden="true" className="floating-heart heart-c">✦</div>
+      <div aria-hidden="true" className="floating-heart heart-d">♡</div>
+      <div aria-hidden="true" className="floating-heart heart-e">✧</div>
 
       <header className="nav">
         <a aria-label="Luckora home" className="logo" href="/">

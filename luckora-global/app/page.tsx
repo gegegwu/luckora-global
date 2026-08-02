@@ -59,6 +59,31 @@ const seoEntryLinks = [
     label: "Dark Personality Test",
     text: "Explore complex traits without diagnosis or negative labels.",
   },
+  {
+    href: "/personality-test-for-students",
+    label: "Personality Test for Students",
+    text: "Explore strengths, learning style and future direction.",
+  },
+  {
+    href: "/personality-test-for-women",
+    label: "Personality Test for Women",
+    text: "Reflect on identity, strengths and personal growth.",
+  },
+  {
+    href: "/personality-test-for-couples",
+    label: "Personality Test for Couples",
+    text: "Use personality insight to understand relationship patterns.",
+  },
+  {
+    href: "/free-personality-test-online",
+    label: "Free Personality Test Online",
+    text: "Start a free online AI personality discovery experience.",
+  },
+  {
+    href: "/ai-personality-quiz",
+    label: "AI Personality Quiz",
+    text: "Discover hidden traits with an AI-powered quiz.",
+  },
 ];
 
 export default function Home() {

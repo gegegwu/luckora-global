@@ -551,6 +551,212 @@ export const seoLandingPages: SeoLandingPage[] = [
       },
     ],
   },
+  {
+    path: "/personality-test-for-students",
+    eyebrow: "For Students",
+    title: "Personality Test for Students - Discover Your Strengths",
+    metadataTitle: "Personality Test for Students - Discover Your Strengths",
+    description:
+      "A personality test for students to explore strengths, learning style, personal traits and future growth direction.",
+    ctaLabel: "Start Student Discovery",
+    ctaPath: "/tests/personality-test",
+    sections: [
+      {
+        title: "What is a personality test for students?",
+        body: "A personality test for students is a self discovery tool that helps learners understand how they think, study, communicate and approach goals. It can make strengths, learning preferences and future direction easier to reflect on.",
+      },
+      {
+        title: "How does it work?",
+        body: "Luckora asks short questions about choices, habits and behavior patterns. Your answers are mapped into a personality identity that explains strengths, growth challenges and possible directions for learning, projects and future career exploration.",
+      },
+      {
+        title: "Benefits for students",
+        body: "Students can use a personality result to better understand study style, motivation, teamwork habits and areas for growth. The result is not a school evaluation or professional counseling report, but it can support clearer self awareness.",
+      },
+    ],
+    faq: [
+      {
+        question: "Is this personality test useful for students?",
+        answer:
+          "Yes. It can help students reflect on strengths, learning patterns, communication style and future growth direction.",
+      },
+      {
+        question: "Does Luckora choose a major or career for me?",
+        answer:
+          "No. Luckora provides self discovery insight, not academic advising or a final career decision.",
+      },
+      {
+        question: "Is the student personality test free?",
+        answer:
+          "Yes. Luckora's current AI personality test is free and does not require signup.",
+      },
+    ],
+  },
+  {
+    path: "/personality-test-for-women",
+    eyebrow: "For Women",
+    title: "Personality Test for Women - Discover Your True Self",
+    metadataTitle: "Personality Test for Women - Discover Your True Self",
+    description:
+      "Explore personality traits, strengths, relationship patterns and personal growth direction with Luckora's AI self discovery test.",
+    ctaLabel: "Discover My True Self",
+    ctaPath: "/tests/personality-test",
+    sections: [
+      {
+        title: "What is a personality test for women?",
+        body: "A personality test for women can support reflection on identity, strengths, emotional patterns, relationships and personal growth. Luckora keeps the experience respectful and practical, without reducing women to stereotypes.",
+      },
+      {
+        title: "How does it work?",
+        body: "The test asks about preferences, choices and natural behavior patterns. Luckora turns your answers into a personality identity with strengths, challenges and growth direction that can be used as a starting point for self reflection.",
+      },
+      {
+        title: "Benefits for personal growth",
+        body: "Understanding personality can help with confidence, communication, boundaries, career choices and relationship awareness. The result is not a diagnosis or life instruction, but a thoughtful mirror for deeper self understanding.",
+      },
+    ],
+    faq: [
+      {
+        question: "Is this personality test only for women?",
+        answer:
+          "No. Anyone can use Luckora, but this page speaks to women searching for self discovery, strengths and personal growth insight.",
+      },
+      {
+        question: "Does the test use gender stereotypes?",
+        answer:
+          "No. Luckora focuses on personality patterns, strengths and growth direction rather than stereotypes.",
+      },
+      {
+        question: "Can this test help with relationships and career?",
+        answer:
+          "It can offer reflective insight about communication, strengths and growth patterns that may support relationship and career decisions.",
+      },
+    ],
+  },
+  {
+    path: "/personality-test-for-couples",
+    eyebrow: "For Couples",
+    title: "Personality Test for Couples - Understand Your Relationship",
+    metadataTitle: "Personality Test for Couples - Understand Your Relationship",
+    description:
+      "Use personality insight to reflect on communication style, relationship patterns and emotional understanding as a couple.",
+    ctaLabel: "Explore Relationship Patterns",
+    ctaPath: "/tests/personality-test",
+    sections: [
+      {
+        title: "What is a personality test for couples?",
+        body: "A personality test for couples helps partners reflect on how each person communicates, makes decisions, handles stress and expresses care. Luckora's current test can be used individually and then discussed together.",
+      },
+      {
+        title: "How does it work?",
+        body: "Each person answers personality questions and receives a self discovery result. Comparing results can create a useful conversation about strengths, needs, emotional patterns and where misunderstandings may happen.",
+      },
+      {
+        title: "Benefits for relationships",
+        body: "Personality insight can help couples communicate more clearly, understand differences with less judgment and notice patterns before they become conflict. It is a reflection tool, not a compatibility verdict.",
+      },
+    ],
+    faq: [
+      {
+        question: "Can Luckora test relationship compatibility?",
+        answer:
+          "Luckora's current test is an individual personality test. Couples can compare results for reflection, but it is not a full compatibility test.",
+      },
+      {
+        question: "Should both partners take the test?",
+        answer:
+          "Yes. For couples, the test is most useful when both people complete it and discuss their results honestly.",
+      },
+      {
+        question: "Can this replace relationship counseling?",
+        answer:
+          "No. Luckora is for self discovery and conversation, not therapy or professional relationship counseling.",
+      },
+    ],
+  },
+  {
+    path: "/free-personality-test-online",
+    eyebrow: "Free Online Test",
+    title: "Free Personality Test Online - Discover Your Personality with AI",
+    metadataTitle:
+      "Free Personality Test Online - Discover Your Personality with AI",
+    description:
+      "Take a free personality test online with Luckora and discover your AI personality identity, strengths and growth direction.",
+    ctaLabel: "Take the Free Online Test",
+    ctaPath: "/tests/personality-test",
+    sections: [
+      {
+        title: "What is a free personality test online?",
+        body: "A free personality test online lets you explore personality traits and strengths without signup or payment. Luckora combines a short test flow with an AI self discovery style result page designed for reflection.",
+      },
+      {
+        title: "How does it work?",
+        body: "You answer a short set of questions, choose the option that feels most natural and receive a personality identity report. The report explains strengths, growth challenges and possible career alignment in plain English.",
+      },
+      {
+        title: "Benefits of an online personality test",
+        body: "An online test is quick, accessible and easy to revisit. It can help you name patterns in thinking, communication and motivation so you can make better personal growth decisions.",
+      },
+    ],
+    faq: [
+      {
+        question: "Is Luckora's personality test online free?",
+        answer:
+          "Yes. Luckora's current AI personality test is free to complete online.",
+      },
+      {
+        question: "Do I need to create an account?",
+        answer:
+          "No. The current Luckora MVP does not require account creation to take the test.",
+      },
+      {
+        question: "How long does the test take?",
+        answer:
+          "The current test has 12 questions and usually takes only a few minutes.",
+      },
+    ],
+  },
+  {
+    path: "/ai-personality-quiz",
+    eyebrow: "AI Personality Quiz",
+    title: "AI Personality Quiz - Discover Your Hidden Traits",
+    metadataTitle: "AI Personality Quiz - Discover Your Hidden Traits",
+    description:
+      "Take an AI personality quiz to discover hidden traits, strengths, behavior patterns and personal growth direction.",
+    ctaLabel: "Start AI Quiz",
+    ctaPath: "/tests/personality-test",
+    sections: [
+      {
+        title: "What is an AI personality quiz?",
+        body: "An AI personality quiz is a short self discovery experience that uses structured questions to reveal patterns in how you think, choose, create and relate to others. Luckora turns those signals into a readable personality identity.",
+      },
+      {
+        title: "How does the AI personality quiz work?",
+        body: "The quiz asks instinctive questions and maps answers across personality signals such as creativity, analysis, connection and leadership. Your result summarizes hidden traits, strengths and growth direction.",
+      },
+      {
+        title: "Benefits of discovering hidden traits",
+        body: "Hidden traits can influence learning, relationships, work style and decision making. A clear personality summary can help you understand yourself faster and choose better next steps for growth.",
+      },
+    ],
+    faq: [
+      {
+        question: "Is an AI personality quiz accurate?",
+        answer:
+          "Luckora is designed for self discovery and reflection. It can offer useful insight, but it is not a clinical or scientific diagnosis.",
+      },
+      {
+        question: "What hidden traits can I discover?",
+        answer:
+          "Your result may highlight patterns in creativity, communication, strategy, curiosity, execution and leadership style.",
+      },
+      {
+        question: "Is the AI personality quiz free?",
+        answer:
+          "Yes. Luckora's current AI personality quiz experience is free to start.",
+      },
+    ],
+  },
 ];
 
 export function getSeoLandingPage(path: string) {

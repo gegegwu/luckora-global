@@ -6,6 +6,7 @@ export const siteConfig = {
   name: "Luckora",
   baseUrl: "https://luckora.online",
   contactEmail: "hello@luckora.online",
+  gaMeasurementId: "G-J43TQ7GEH6",
   googleSiteVerification: "FSjLrIC9U3X_n_Vx7j4WYbSLD4QYUlzn_iGaIL_b26s",
   ogImagePath: "/opengraph-image",
   defaultTitle: "Luckora - AI Self Discovery Tests",

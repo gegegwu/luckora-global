@@ -1,6 +1,7 @@
 import Script from "next/script";
+import { siteConfig } from "@/lib/seo";
 
-const gaId = process.env.NEXT_PUBLIC_GA_ID;
+const gaId = process.env.NEXT_PUBLIC_GA_ID || siteConfig.gaMeasurementId;
 
 export function GoogleAnalytics() {
   if (!gaId) {

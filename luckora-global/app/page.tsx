@@ -90,34 +90,18 @@ const discoveryPaths = [
   {
     title: "Personality Test",
     icon: "🌌",
-    description: "Discover your personality traits and hidden potential.",
+    description: "Discover your hidden traits and inner patterns.",
     href: "/test",
-    status: "available",
     source: "homepage_discovery_personality",
+    accent: "cosmic",
   },
   {
     title: "Love Language Test",
     icon: "❤️",
-    description: "Understand how you give and receive love.",
+    description: "Understand your emotional connection style.",
     href: "/love-language-test",
-    status: "available",
     source: "homepage_discovery_love_language",
-  },
-  {
-    title: "Strengths Test",
-    icon: "✨",
-    description: "Discover your natural strengths and abilities.",
-    href: "/tests/strengths-test",
-    status: "coming-soon",
-    source: "homepage_discovery_strengths",
-  },
-  {
-    title: "Career Personality Test",
-    icon: "💼",
-    description: "Explore your ideal career direction.",
-    href: "/tests/career-test",
-    status: "coming-soon",
-    source: "homepage_discovery_career",
+    accent: "love",
   },
 ];
 
@@ -228,42 +212,36 @@ export default function Home() {
         <div className="discovery-paths-header">
           <span className="eyebrow">Discovery Paths</span>
           <div>
-            <h2>Explore what Luckora can reveal.</h2>
+            <h2>Choose the universe you want to explore.</h2>
             <p>
-              Start with personality today, then follow relationship, strengths
-              and career paths as the platform grows.
+              Luckora begins with two focused self discovery journeys: your
+              inner identity and the way your heart connects.
             </p>
           </div>
         </div>
 
         <div className="discovery-paths-grid">
           {discoveryPaths.map((path, index) => {
-            const isAvailable = path.status === "available";
-
             return (
               <motion.a
-                aria-label={`${path.title} ${isAvailable ? "available" : "coming soon"}`}
-                className={`discovery-path${isAvailable ? "" : " is-coming-soon"}`}
+                aria-label={`Start ${path.title}`}
+                className={`discovery-path discovery-path-${path.accent}`}
                 href={path.href}
                 initial={false}
                 key={path.title}
-                onClick={() => {
-                  if (isAvailable) {
-                    trackStartTestClick(path.source);
-                  }
-                }}
-                transition={{ delay: 0.05 * index, duration: 0.35 }}
+                onClick={() => trackStartTestClick(path.source)}
+                transition={{ delay: 0.08 * index, duration: 0.42 }}
                 viewport={{ once: true }}
-                whileHover={{ y: isAvailable ? -2 : 0 }}
+                whileHover={{ y: -4 }}
                 whileInView={{ opacity: 1, y: 0 }}
               >
-                <span className="discovery-path-icon">{path.icon}</span>
-                <div>
-                  <div className="discovery-path-topline">
-                    <h3>{path.title}</h3>
-                    <small>{isAvailable ? "Open" : "Coming Soon"}</small>
-                  </div>
+                <div className="discovery-path-orb" aria-hidden="true" />
+                <div className="discovery-path-content">
+                  <span className="discovery-path-icon">{path.icon}</span>
+                  <small>Available now</small>
+                  <h3>{path.title}</h3>
                   <p>{path.description}</p>
+                  <span className="discovery-path-action">Enter this path</span>
                 </div>
               </motion.a>
             );

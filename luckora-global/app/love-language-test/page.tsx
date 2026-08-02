@@ -63,11 +63,16 @@ function LoveLanguageTestContent() {
   }
 
   return (
-    <main className="site-shell test-shell" dir={direction}>
+    <main className="site-shell test-shell love-theme-shell" dir={direction}>
       <StarField />
       <div className="cosmic-noise" />
       <div className="nebula nebula-a" />
       <div className="nebula nebula-b" />
+      <div aria-hidden="true" className="love-glow love-glow-a" />
+      <div aria-hidden="true" className="love-glow love-glow-b" />
+      <div aria-hidden="true" className="floating-heart heart-a">♡</div>
+      <div aria-hidden="true" className="floating-heart heart-b">♡</div>
+      <div aria-hidden="true" className="floating-heart heart-c">✦</div>
 
       <header className="nav">
         <a aria-label="Luckora home" className="logo" href="/">
@@ -84,7 +89,7 @@ function LoveLanguageTestContent() {
         {hasStarted ? (
           <>
             <div className="test-intro">
-              <span className="eyebrow">Love Language Test</span>
+              <span className="eyebrow love-eyebrow">Love Language Test</span>
               <p>
                 Answer with instinct. Luckora will map how you naturally give
                 love, receive affection and connect with others.
@@ -99,8 +104,8 @@ function LoveLanguageTestContent() {
           </>
         ) : (
           <section className="question-card test-start-card love-start-card">
-            <span className="eyebrow">Love Language Test</span>
-            <h1>Discover how you give and receive love.</h1>
+            <span className="eyebrow love-eyebrow">Love Language Test</span>
+            <h1>Discover How Your Heart Speaks <span aria-hidden="true">♡</span></h1>
             <p>
               Take a free relationship self discovery test to understand your
               primary love language, connection style and emotional needs.

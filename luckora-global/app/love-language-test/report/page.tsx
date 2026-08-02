@@ -42,11 +42,16 @@ export default function LoveLanguageReportPage() {
   }, []);
 
   return (
-    <main className="site-shell test-shell" dir={direction}>
+    <main className="site-shell test-shell love-theme-shell" dir={direction}>
       <StarField />
       <div className="cosmic-noise" />
       <div className="nebula nebula-a" />
       <div className="nebula nebula-b" />
+      <div aria-hidden="true" className="love-glow love-glow-a" />
+      <div aria-hidden="true" className="love-glow love-glow-b" />
+      <div aria-hidden="true" className="floating-heart heart-a">♡</div>
+      <div aria-hidden="true" className="floating-heart heart-b">♡</div>
+      <div aria-hidden="true" className="floating-heart heart-c">✦</div>
 
       <header className="nav">
         <a aria-label="Luckora home" className="logo" href="/">
@@ -67,7 +72,7 @@ export default function LoveLanguageReportPage() {
           />
         ) : (
           <div className="question-card">
-            <span className="eyebrow">Your Love Language</span>
+            <span className="eyebrow love-eyebrow">Your Love Language</span>
             <h1>Your love language result is waiting.</h1>
             <p>
               Complete the Love Language Test first, then Luckora will show how

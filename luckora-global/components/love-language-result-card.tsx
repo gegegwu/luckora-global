@@ -45,7 +45,7 @@ export function LoveLanguageResultCard({
     >
       <div className="result-hero">
         <div>
-          <span className="eyebrow">Your Love Language</span>
+          <span className="eyebrow love-eyebrow">Your Love Language ♡</span>
           <h1>{result.name}</h1>
           <strong>{result.title}</strong>
           <p className="emotional-line">{result.meaning}</p>
@@ -56,7 +56,7 @@ export function LoveLanguageResultCard({
       </div>
 
       <div className="result-section">
-        <h2>Love Language Profile</h2>
+        <h2>Your Love Style</h2>
         <div className="profile-score-list">
           {(Object.entries(result.scores) as Array<[LoveLanguageType, number]>).map(
             ([type, score]) => {
@@ -79,17 +79,17 @@ export function LoveLanguageResultCard({
       </div>
 
       <div className="result-section">
-        <h2>How You Give Love</h2>
+        <h2>♡ How You Give Love</h2>
         <p>{result.giveLove}</p>
       </div>
 
       <div className="result-section">
-        <h2>How You Receive Love</h2>
+        <h2>♡ How You Receive Love</h2>
         <p>{result.receiveLove}</p>
       </div>
 
       <div className="result-section">
-        <h2>Relationship Strengths</h2>
+        <h2>✦ Relationship Strengths</h2>
         <div className="strength-list">
           {result.strengths.map((strength) => (
             <span key={strength}>{strength}</span>

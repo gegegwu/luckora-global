@@ -1023,14 +1023,7 @@ button {
 
 .how-section {
   margin-top: 18px;
-  border: 1px solid var(--line);
-  border-radius: 30px;
-  padding: 28px;
-  background:
-    radial-gradient(circle at 90% 10%, rgba(125, 232, 255, 0.12), transparent 28%),
-    linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.04));
-  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.18);
-  backdrop-filter: blur(20px);
+  padding: 28px 0;
 }
 
 .how-grid {
@@ -1077,8 +1070,7 @@ button {
   margin: 18px auto 0;
 }
 
-.feature-card,
-.seo-section {
+.feature-card {
   border: 1px solid var(--line);
   background:
     linear-gradient(145deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.045));
@@ -1133,8 +1125,7 @@ button {
   gap: 28px;
   max-width: 1180px;
   margin: 18px auto 0;
-  border-radius: 30px;
-  padding: 28px;
+  padding: 28px 0;
 }
 
 .seo-section h2 {
@@ -1174,14 +1165,7 @@ button {
 
 .insights-section {
   margin-top: 18px;
-  border: 1px solid var(--line);
-  border-radius: 30px;
-  padding: 28px;
-  background:
-    radial-gradient(circle at 82% 18%, rgba(244, 201, 107, 0.12), transparent 28%),
-    linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.04));
-  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.18);
-  backdrop-filter: blur(20px);
+  padding: 28px 0;
 }
 
 .insights-section p {

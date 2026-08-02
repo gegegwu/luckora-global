@@ -8,6 +8,34 @@ import { trackHomepageView, trackStartTestClick } from "@/lib/analytics";
 import { getDictionary } from "@/lib/i18n";
 import { jsonLd, organizationSchema, websiteSchema } from "@/lib/schema";
 
+const seoEntryLinks = [
+  {
+    href: "/mbti-test",
+    label: "MBTI Test",
+    text: "Explore MBTI-style personality patterns with Luckora.",
+  },
+  {
+    href: "/love-personality-test",
+    label: "Love Personality Test",
+    text: "Understand relationship style and emotional patterns.",
+  },
+  {
+    href: "/career-personality-test",
+    label: "Career Personality Test",
+    text: "Connect personality signals with career direction.",
+  },
+  {
+    href: "/attachment-style-test",
+    label: "Attachment Style Test",
+    text: "Reflect on emotional needs and relationship patterns.",
+  },
+  {
+    href: "/introvert-test",
+    label: "Introvert Test",
+    text: "Discover your social energy and introvert traits.",
+  },
+];
+
 export default function Home() {
   const locale = "en";
   const dictionary = useMemo(() => getDictionary(locale), [locale]);
@@ -116,7 +144,18 @@ export default function Home() {
           <span className="eyebrow">Luckora GEO / SEO Foundation</span>
           <h2>{dictionary.seo.title}</h2>
         </div>
-        <p>{dictionary.seo.body}</p>
+        <div>
+          <p>{dictionary.seo.body}</p>
+          <div className="seo-link-grid home-seo-link-grid">
+            {seoEntryLinks.map((link) => (
+              <a href={link.href} key={link.href}>
+                <span>SEO Guide</span>
+                <strong>{link.label}</strong>
+                <p>{link.text}</p>
+              </a>
+            ))}
+          </div>
+        </div>
       </section>
 
       <script

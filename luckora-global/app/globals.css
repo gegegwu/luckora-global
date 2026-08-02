@@ -921,6 +921,11 @@ button {
   line-height: 1.75;
 }
 
+.home-seo-link-grid {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  margin-top: 22px;
+}
+
 .test-shell {
   display: flex;
   flex-direction: column;

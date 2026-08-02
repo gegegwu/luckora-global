@@ -4,6 +4,11 @@ import { siteConfig } from "@/lib/seo";
 const publicSeoPages = [
   "",
   "/ai-personality-test",
+  "/mbti-test",
+  "/love-personality-test",
+  "/career-personality-test",
+  "/attachment-style-test",
+  "/introvert-test",
   "/free-personality-test",
   "/personality-types",
   "/tests",

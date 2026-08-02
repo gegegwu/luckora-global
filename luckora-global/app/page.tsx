@@ -201,44 +201,46 @@ export default function Home() {
       </section>
 
       <section className="discovery-paths-section" id="tests">
-        <div className="discovery-paths-header">
+        <motion.div
+          animate={{ opacity: 1, y: 0 }}
+          className="discovery-path-copy"
+          initial={false}
+          transition={{ duration: 0.75 }}
+        >
           <span className="eyebrow">Discovery Paths</span>
-          <div>
-            <h2>Continue into the language of connection.</h2>
-            <p>
-              After personality, explore how you give love, receive affection
-              and build emotional closeness.
-            </p>
-          </div>
-        </div>
+          <h2>Continue into the language of connection.</h2>
+          <p>
+            After personality, explore how you give love, receive affection and
+            build emotional closeness.
+          </p>
+          <motion.a
+            className="primary-action discovery-path-action"
+            href={discoveryPaths[0].href}
+            onClick={() => trackStartTestClick(discoveryPaths[0].source)}
+            whileHover={{ scale: 1.025 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <span>Enter This Path</span>
+          </motion.a>
+        </motion.div>
 
-        <div className="discovery-paths-grid">
-          {discoveryPaths.map((path, index) => {
-            return (
-              <motion.a
-                aria-label={`Start ${path.title}`}
-                className={`discovery-path discovery-path-${path.accent}`}
-                href={path.href}
-                initial={false}
-                key={path.title}
-                onClick={() => trackStartTestClick(path.source)}
-                transition={{ delay: 0.08 * index, duration: 0.42 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -4 }}
-                whileInView={{ opacity: 1, y: 0 }}
-              >
-                <div className="discovery-path-orb" aria-hidden="true" />
-                <div className="discovery-path-content">
-                  <span className="discovery-path-icon">{path.icon}</span>
-                  <small>Available now</small>
-                  <h3>{path.title}</h3>
-                  <p>{path.description}</p>
-                  <span className="discovery-path-action">Enter this path</span>
-                </div>
-              </motion.a>
-            );
-          })}
-        </div>
+        <motion.div
+          animate={{ opacity: 1, x: 0 }}
+          className="discovery-path-visual"
+          initial={false}
+          transition={{ duration: 0.8, delay: 0.12 }}
+        >
+          <div className="love-universe" aria-hidden="true">
+            <div className="love-heart" />
+            <div className="love-orbit love-orbit-a" />
+            <div className="love-orbit love-orbit-b" />
+            <div className="love-pulse" />
+          </div>
+          <div className="orb-caption love-caption">
+            <span>Heart Signal</span>
+            <p>Understand the quiet patterns of emotional connection.</p>
+          </div>
+        </motion.div>
       </section>
 
       <section className="how-section">

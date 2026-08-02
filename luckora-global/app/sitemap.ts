@@ -11,6 +11,8 @@ const publicSeoPages = [
   "/leadership-test",
   "/dark-personality-test",
   "/love-personality-test",
+  "/love-language-test",
+  "/tests/love-language-test",
   "/career-personality-test",
   "/attachment-style-test",
   "/introvert-test",

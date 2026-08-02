@@ -174,20 +174,47 @@ export const testConfigs: TestConfig[] = [
   },
   {
     id: "love",
-    title: "AI Love Test",
+    title: "Love Language Test",
     description:
-      "Understand relationship patterns, emotional needs and compatibility signals.",
-    slug: "love-test",
-    status: "coming-soon",
+      "Discover how you express love, receive affection and connect with others.",
+    slug: "love-language-test",
+    status: "available",
     icon: "◌",
-    seoTitle: "AI Love Test - Understand Your Relationship Style | Luckora",
+    startPath: "/love-language-test",
+    seoTitle: "Love Language Test - Discover How You Give and Receive Love | Luckora",
     seoDescription:
-      "Explore Luckora's upcoming AI love test for relationship style and emotional patterns.",
+      "Take a free Love Language Test and discover how you express love, receive affection, and connect with others.",
     whatIsThis:
-      "The AI Love Test will help users reflect on relationship style, emotional needs and compatibility patterns.",
-    howItWorks: ["Reflect on relationship behavior.", "Map emotional needs.", "Receive relationship growth guidance."],
-    discoveries: ["Relationship style", "Emotional needs", "Compatibility signals"],
-    faq: [{ question: "Is the AI Love Test available?", answer: "Not yet. It is planned as a future Luckora test." }],
+      "A Love Language Test is a relationship self discovery tool that helps you understand the way you most naturally express love and feel emotionally appreciated. Luckora maps your answers across five love language patterns: Words of Affirmation, Quality Time, Acts of Service, Receiving Gifts and Physical Touch.",
+    howItWorks: [
+      "Answer 15 instinctive questions about affection, appreciation and emotional connection.",
+      "Luckora maps your answers across five love language patterns.",
+      "Your result explains how you give love, receive love and build stronger relationship awareness.",
+    ],
+    discoveries: [
+      "Your primary love language",
+      "How you give love",
+      "How you receive affection",
+      "Relationship strengths",
+      "Growth challenge and connection tips",
+    ],
+    faq: [
+      {
+        question: "What is a Love Language Test?",
+        answer:
+          "A Love Language Test helps you reflect on how you express love, receive affection and feel emotionally connected in relationships.",
+      },
+      {
+        question: "Is this test a psychological diagnosis?",
+        answer:
+          "No. Luckora's Love Language Test is for self discovery and relationship reflection, not medical or psychological diagnosis.",
+      },
+      {
+        question: "Is the Love Language Test free?",
+        answer:
+          "Yes. Luckora's current Love Language Test is free and does not require signup.",
+      },
+    ],
   },
   {
     id: "money-mindset",

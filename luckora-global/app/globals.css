@@ -892,6 +892,7 @@ button {
 }
 
 .discovery-path-copy {
+  grid-column: 2;
   max-width: 710px;
 }
 
@@ -917,6 +918,8 @@ button {
 
 .discovery-path-visual {
   position: relative;
+  grid-column: 1;
+  grid-row: 1;
   min-height: 520px;
 }
 
@@ -1013,7 +1016,8 @@ button {
 }
 
 .love-caption {
-  right: 0;
+  right: auto;
+  left: 0;
   bottom: 38px;
 }
 
@@ -2143,6 +2147,12 @@ button {
     grid-template-columns: 1fr;
     min-height: auto;
     padding-top: 64px;
+  }
+
+  .discovery-path-copy,
+  .discovery-path-visual {
+    grid-column: auto;
+    grid-row: auto;
   }
 
   .hero-copy {

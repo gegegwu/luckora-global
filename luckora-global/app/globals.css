@@ -922,8 +922,24 @@ button {
 }
 
 .home-seo-link-grid {
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-top: 22px;
+}
+
+.home-seo-link-grid a {
+  min-height: 150px;
+}
+
+.home-seo-link-grid strong {
+  font-size: 20px;
+}
+
+.seo-more-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 18px;
+  color: var(--gold);
+  font-weight: 900;
 }
 
 .test-shell {

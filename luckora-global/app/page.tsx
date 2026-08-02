@@ -197,7 +197,7 @@ export default function Home() {
         <div>
           <p>{dictionary.seo.body}</p>
           <div className="seo-link-grid home-seo-link-grid">
-            {seoEntryLinks.map((link) => (
+            {seoEntryLinks.slice(0, 6).map((link) => (
               <a href={link.href} key={link.href}>
                 <span>SEO Guide</span>
                 <strong>{link.label}</strong>
@@ -205,6 +205,9 @@ export default function Home() {
               </a>
             ))}
           </div>
+          <a className="seo-more-link" href="/tests">
+            Explore all Luckora tests
+          </a>
         </div>
       </section>
 

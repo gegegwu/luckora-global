@@ -63,10 +63,10 @@ export function StaticInfoPage({
               <strong>Contact</strong>
               <p>Find the correct way to contact Luckora for site questions.</p>
             </a>
-            <a href="/privacy">
+            <a href="/privacy-policy">
               <span>Policy</span>
               <strong>Privacy Policy</strong>
-              <p>Understand how the current website handles basic data.</p>
+              <p>Understand analytics, advertising, cookies and privacy choices.</p>
             </a>
             <a href="/disclaimer">
               <span>Safety</span>

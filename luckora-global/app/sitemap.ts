@@ -18,6 +18,7 @@ const publicSeoPages = [
   "/about",
   "/contact",
   "/privacy",
+  "/privacy-policy",
   "/terms",
   "/disclaimer",
 ];

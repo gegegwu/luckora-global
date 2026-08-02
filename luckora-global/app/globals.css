@@ -1023,43 +1023,26 @@ button {
 
 .how-section {
   margin-top: 18px;
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
-  gap: clamp(28px, 5vw, 72px);
-  align-items: start;
-  padding: 64px 0 42px;
+  padding: 28px 0;
 }
 
 .how-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
-  margin-top: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 22px;
 }
 
 .how-grid article {
-  display: grid;
-  grid-template-columns: 110px 1fr;
-  gap: 22px;
-  align-items: start;
-  min-height: auto;
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
-  padding: 26px 0;
-  background: transparent;
-}
-
-.how-grid article:last-child {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  min-height: 168px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.055);
 }
 
 .how-grid span {
-  display: inline-flex;
-  width: fit-content;
-  border: 1px solid rgba(244, 201, 107, 0.24);
-  border-radius: 999px;
-  padding: 8px 10px;
   color: var(--gold);
-  background: rgba(244, 201, 107, 0.055);
   font-size: 12px;
   font-weight: 950;
   letter-spacing: 0.12em;
@@ -1067,19 +1050,16 @@ button {
 }
 
 .how-grid h3 {
-  margin: 0 0 8px;
+  margin: 22px 0 8px;
   color: #fff;
-  font-size: clamp(24px, 2.7vw, 36px);
-  line-height: 1.02;
+  font-size: 22px;
   letter-spacing: -0.04em;
 }
 
 .how-grid p {
-  max-width: 620px;
   margin: 0;
   color: rgba(246, 242, 255, 0.68);
-  font-size: 17px;
-  line-height: 1.7;
+  line-height: 1.62;
 }
 
 .feature-grid {
@@ -2153,11 +2133,6 @@ button {
     padding-top: 64px;
   }
 
-  .how-section {
-    grid-template-columns: 1fr;
-    padding-top: 38px;
-  }
-
   .discovery-path-copy,
   .discovery-path-visual {
     grid-column: auto;
@@ -2285,11 +2260,6 @@ button {
     bottom: 0;
     transform: translateX(50%);
     width: min(280px, 86vw);
-  }
-
-  .how-grid article {
-    grid-template-columns: 1fr;
-    gap: 14px;
   }
 
   .orb-caption {

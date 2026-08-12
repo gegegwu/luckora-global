@@ -3,7 +3,9 @@ import { testConfigs } from "@/lib/tests";
 
 export function RelatedTests({ currentSlug }: { currentSlug?: string }) {
   const relatedTests = testConfigs
-    .filter((test) => test.slug !== currentSlug)
+    .filter(
+      (test) => test.status === "available" && test.slug !== currentSlug,
+    )
     .slice(0, 4);
 
   return (
@@ -12,7 +14,7 @@ export function RelatedTests({ currentSlug }: { currentSlug?: string }) {
       <div className="seo-link-grid">
         {relatedTests.map((test) => (
           <a href={`/tests/${test.slug}`} key={test.slug}>
-            <span>{test.status === "available" ? "Available" : "Coming Soon"}</span>
+            <span>Available</span>
             <strong>{test.title}</strong>
             <p>{test.description}</p>
           </a>
@@ -52,25 +54,25 @@ export function ExploreMore() {
     <section className="result-section seo-links-section">
       <h2>Explore More</h2>
       <div className="seo-link-grid">
-        <a href="/careers">
-          <span>Hub</span>
-          <strong>Careers</strong>
-          <p>Explore AI-era career direction and future work alignment.</p>
+        <a href="/tests/personality-test">
+          <span>Test</span>
+          <strong>Personality Test</strong>
+          <p>Discover your traits, hidden strengths and growth direction.</p>
         </a>
-        <a href="/strengths">
+        <a href="/love-language-test">
+          <span>Test</span>
+          <strong>Love Language Test</strong>
+          <p>Understand how you give love, receive affection and connect.</p>
+        </a>
+        <a href="/personality-types">
           <span>Hub</span>
-          <strong>Strengths</strong>
-          <p>Understand hidden strengths, natural abilities and growth signals.</p>
+          <strong>Personality Types</strong>
+          <p>Learn how Luckora explains recurring personality patterns.</p>
         </a>
         <a href="/guides">
           <span>Hub</span>
           <strong>Guides</strong>
           <p>Read self discovery guides designed for search and AI answers.</p>
-        </a>
-        <a href="/reports">
-          <span>Hub</span>
-          <strong>Reports</strong>
-          <p>Preview future AI deep personality report experiences.</p>
         </a>
       </div>
     </section>

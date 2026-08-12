@@ -267,6 +267,98 @@ export const testConfigs: TestConfig[] = [
     discoveries: ["Personal values", "Life direction", "Meaningful growth themes"],
     faq: [{ question: "Is this a spiritual test?", answer: "Luckora focuses on self discovery and reflection, not fortune telling or supernatural claims." }],
   },
+  {
+    id: "chinese-name-reading",
+    title: "Chinese Name Reading",
+    description:
+      "Explore the meaning, feeling and symbolic fit of a Chinese name as a paid self discovery reading.",
+    slug: "chinese-name-reading",
+    status: "coming-soon",
+    icon: "名",
+    seoTitle: "Chinese Name Reading - Find a Meaningful Chinese Name | Luckora",
+    seoDescription:
+      "Explore Luckora's upcoming Chinese Name Reading for symbolic meaning, identity fit and personal style.",
+    whatIsThis:
+      "The Chinese Name Reading is a planned paid product that helps users explore a Chinese name through symbolic meaning, personality fit and identity feeling.",
+    howItWorks: [
+      "Share your current name, style or identity preference.",
+      "Review name direction, symbolism and emotional fit.",
+      "Receive a deeper paid reading around meaning and personality resonance.",
+    ],
+    discoveries: [
+      "Chinese name meaning",
+      "Identity style",
+      "Symbolic fit",
+      "Personal naming direction",
+    ],
+    seoSections: [
+      {
+        title: "What is a Chinese Name Reading?",
+        body: "A Chinese Name Reading is a paid identity-style reading built for people who want more than a random translated name. Many users want a Chinese name that feels meaningful, memorable and emotionally aligned with how they want to present themselves. A stronger Chinese name reading explores symbolism, tone, character feeling, style direction and how a name fits a person's personality or self image.",
+      },
+      {
+        title: "Why people search for a meaningful Chinese name",
+        body: "People often search for a Chinese name because they want something that feels personal rather than generic. Some want a Chinese name for study, business, content creation, relocation, relationships or cultural connection. Others simply want a name that reflects their personality, energy or preferred identity. This makes Chinese name reading a strong high-intent SEO topic because the search often carries both curiosity and buying potential.",
+      },
+      {
+        title: "What a paid Chinese name reading can include",
+        body: "A paid Chinese name reading can go beyond one suggested name. It can explain the emotional feel of a name, why certain characters fit better than others, what identity tone the name creates and how it may align with a person's personality, goals or aesthetic preferences. This is the layer users are more likely to pay for because it feels personal, specific and identity-driven.",
+      },
+    ],
+    faq: [
+      {
+        question: "Is the Chinese Name Reading free?",
+        answer:
+          "No. The planned Chinese Name Reading is being positioned as a paid premium reading rather than a free test.",
+      },
+    ],
+  },
+  {
+    id: "crystal-match",
+    title: "Best Crystal for You",
+    description:
+      "Explore which crystal style may fit your emotional needs, energy and self discovery goals.",
+    slug: "best-crystal-for-you",
+    status: "coming-soon",
+    icon: "◈",
+    seoTitle: "Best Crystal for You - Discover Your Crystal Match | Luckora",
+    seoDescription:
+      "Explore Luckora's upcoming crystal match reading for emotional support, symbolic energy and personal style.",
+    whatIsThis:
+      "The Best Crystal for You reading is a planned paid offer for users who want a symbolic crystal recommendation connected to personality and emotional needs.",
+    howItWorks: [
+      "Reflect on your current emotional state, goals or energy.",
+      "Match recurring patterns with crystal themes and symbolic support.",
+      "Receive a paid recommendation with practical and reflective guidance.",
+    ],
+    discoveries: [
+      "Crystal match",
+      "Emotional support theme",
+      "Symbolic energy direction",
+      "Personal ritual ideas",
+    ],
+    seoSections: [
+      {
+        title: "How to find the best crystal for you",
+        body: "Many people search for the best crystal for them when they want more emotional grounding, better focus, a sense of protection or a stronger personal ritual. Even when the interest starts as curiosity, the deeper motivation is often emotional: people want something that feels supportive, symbolic and personally chosen. That is why a crystal match reading can work as both a self discovery product and an SEO topic.",
+      },
+      {
+        title: "What makes a crystal recommendation feel personal",
+        body: "A random list of crystal meanings is usually not enough to feel valuable. A stronger crystal recommendation connects the crystal theme to a person's emotional pattern, current life stage, relationship stress, need for calm, desire for confidence or wish for clarity. The more personal the reasoning feels, the more likely users are to see the recommendation as worth paying for.",
+      },
+      {
+        title: "Why this can be a paid self discovery product",
+        body: "A paid crystal reading does not only say what crystal to wear. It can explain why a crystal theme fits a person's emotional state, what kind of symbolic support it represents and how the recommendation connects with identity, ritual and intention. That deeper interpretation is what turns a casual SEO page into a product candidate.",
+      },
+    ],
+    faq: [
+      {
+        question: "Is this a scientific recommendation?",
+        answer:
+          "No. Luckora positions crystal content as symbolic self discovery and reflection, not scientific or medical advice.",
+      },
+    ],
+  },
 ];
 
 export function getTestBySlug(slug: string) {

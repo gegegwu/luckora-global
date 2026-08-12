@@ -1,9 +1,11 @@
 import { ExploreMore, RelatedTests } from "@/components/seo-link-sections";
 import { StarField } from "@/components/star-field";
 import { breadcrumbSchema, jsonLd } from "@/lib/schema";
-import type { SeoHub } from "@/lib/seo-routes";
+import { getSeoCollection, type SeoHub } from "@/lib/seo-routes";
 
 export function SeoHubPage({ hub }: { hub: SeoHub }) {
+  const collection = getSeoCollection(hub.path);
+
   return (
     <main className="site-shell test-shell">
       <StarField />
@@ -33,6 +35,21 @@ export function SeoHubPage({ hub }: { hub: SeoHub }) {
           </a>
           <a href="/tests">All Tests</a>
         </div>
+
+        {collection.length > 0 ? (
+          <section className="result-section seo-links-section">
+            <h2>Featured Guides</h2>
+            <div className="seo-link-grid">
+              {collection.slice(0, 6).map((item) => (
+                <a href={item.path} key={item.path}>
+                  <span>{item.label ?? "Guide"}</span>
+                  <strong>{item.title}</strong>
+                  <p>{item.description ?? "Read the full guide."}</p>
+                </a>
+              ))}
+            </div>
+          </section>
+        ) : null}
 
         <RelatedTests />
         <ExploreMore />

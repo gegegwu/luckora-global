@@ -9,6 +9,8 @@ import {
 import { createSeoMetadata } from "@/lib/seo";
 import { testConfigs } from "@/lib/tests";
 
+const availableTests = testConfigs.filter((test) => test.status === "available");
+
 export const metadata: Metadata = createSeoMetadata({
   title: "AI Self Discovery Tests | Luckora",
   description:
@@ -52,22 +54,16 @@ export default function TestsPage() {
       </section>
 
       <section aria-label="Luckora tests" className="tests-grid">
-        {testConfigs.map((test) => (
+        {availableTests.map((test) => (
           <article className="test-card" key={test.id}>
             <div className="test-card-top">
               <span className="test-icon">{test.icon}</span>
-              <span className={`test-status ${test.status}`}>
-                {test.status === "available" ? "Available" : "Coming Soon"}
-              </span>
+              <span className={`test-status ${test.status}`}>Available</span>
             </div>
             <h2>{test.title}</h2>
             <p>{test.description}</p>
-            <a
-              aria-disabled={test.status !== "available"}
-              className="test-card-link"
-              href={`/tests/${test.slug}`}
-            >
-              {test.status === "available" ? "Explore Test" : "Preview"}
+            <a className="test-card-link" href={`/tests/${test.slug}`}>
+              Explore Test
             </a>
           </article>
         ))}

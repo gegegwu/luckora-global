@@ -4,7 +4,7 @@ import { Suspense, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { QuestionCard } from "@/components/question-card";
 import { StarField } from "@/components/star-field";
-import { trackTestStarted } from "@/lib/analytics";
+import { trackStartTestClick, trackTestStarted } from "@/lib/analytics";
 import {
   talentQuestions,
   type TalentOption,
@@ -99,6 +99,7 @@ function TestContent() {
             <a
               className="primary-action"
               href="/test?start=1"
+              onClick={() => trackStartTestClick("test_start_card")}
             >
               <span>Start Discovery</span>
             </a>

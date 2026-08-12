@@ -21,7 +21,7 @@ export default function ContactPage() {
       sections={[
         {
           title: "How to contact us",
-          body: `For website questions, feedback or policy requests, contact Luckora by email at ${siteConfig.contactEmail}. Please include the page URL and a short description of your question so we can understand the context.`,
+          body: `For website questions, feedback, policy requests or full report interest, contact Luckora by email at ${siteConfig.contactEmail}. Please include the page URL, your result type if relevant, and a short description of what you want so we can understand the context.`,
         },
         {
           title: "Response expectations",

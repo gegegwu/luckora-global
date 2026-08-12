@@ -122,6 +122,23 @@ export function ResultCard({ result }: { result: TalentResult }) {
         </div>
       </div>
 
+      <div className="result-section">
+        <h2>Keep Exploring</h2>
+        <p>
+          Your result is a starting point. Explore more personality guides and
+          relationship insight pages to understand how your strengths, growth
+          patterns and communication style show up in real life.
+        </p>
+        <div className="result-actions">
+          <a className="primary-action" href="/guides">
+            <span>Explore Guides</span>
+          </a>
+          <a className="secondary-action" href="/tests">
+            <span>See All Available Tests</span>
+          </a>
+        </div>
+      </div>
+
       <div className="result-section share-panel">
         <div className="share-card">
           <span>LUCKORA</span>

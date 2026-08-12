@@ -19,9 +19,11 @@ type TestLandingPageProps = {
 };
 
 export function generateStaticParams() {
-  return testConfigs.map((test) => ({
-    slug: test.slug,
-  }));
+  return testConfigs
+    .filter((test) => test.status === "available")
+    .map((test) => ({
+      slug: test.slug,
+    }));
 }
 
 export async function generateMetadata({
@@ -34,6 +36,17 @@ export async function generateMetadata({
     return {};
   }
 
+  if (test.status !== "available") {
+    return {
+      title: test.seoTitle,
+      description: test.seoDescription,
+      robots: {
+        index: false,
+        follow: false,
+      },
+    };
+  }
+
   return createTestMetadata(test);
 }
 
@@ -44,6 +57,10 @@ export default async function TestLandingPage({
   const test = getTestBySlug(slug);
 
   if (!test) {
+    notFound();
+  }
+
+  if (test.status !== "available") {
     notFound();
   }
 

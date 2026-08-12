@@ -86,9 +86,19 @@ export function trackReportViewed(resultSlug: string, resultType: string) {
   });
 }
 
-export function trackPremiumClick(source: string) {
+export function trackPremiumClick(
+  source: string,
+  details: {
+    offerType?: string;
+    offerPrice?: string;
+    offerStage?: string;
+  } = {},
+) {
   trackEvent("premium_click", {
     source,
+    offer_type: details.offerType || "unknown",
+    offer_price: details.offerPrice || "unknown",
+    offer_stage: details.offerStage || "unknown",
     test_id: "personality",
     test_slug: "personality-test",
   });

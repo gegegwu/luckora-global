@@ -10,79 +10,49 @@ import { jsonLd, organizationSchema, websiteSchema } from "@/lib/schema";
 
 const seoEntryLinks = [
   {
-    href: "/mbti-test",
-    label: "MBTI Test",
-    text: "Explore MBTI-style personality patterns with Luckora.",
+    href: "/guides/why-do-i-overthink-everything",
+    label: "Why Do I Overthink Everything?",
+    text: "Understand why reflective people get stuck in mental loops.",
   },
   {
-    href: "/love-personality-test",
-    label: "Love Personality Test",
-    text: "Understand relationship style and emotional patterns.",
+    href: "/guides/why-do-certain-people-drain-me",
+    label: "Why Do Certain People Drain Me?",
+    text: "Explore relationship patterns that create emotional depletion.",
   },
   {
-    href: "/career-personality-test",
-    label: "Career Personality Test",
-    text: "Connect personality signals with career direction.",
+    href: "/guides/high-sensitivity-and-emotional-rumination",
+    label: "High Sensitivity and Emotional Rumination",
+    text: "Learn how deep feeling turns into emotional replay and fatigue.",
   },
   {
-    href: "/attachment-style-test",
-    label: "Attachment Style Test",
-    text: "Reflect on emotional needs and relationship patterns.",
+    href: "/guides/how-to-understand-your-hidden-strengths",
+    label: "How to Understand Your Hidden Strengths",
+    text: "Identify the strengths already shaping your choices and growth.",
   },
   {
-    href: "/introvert-test",
-    label: "Introvert Test",
-    text: "Discover your social energy and introvert traits.",
+    href: "/guides/how-to-stop-ruminating-after-a-conversation",
+    label: "How to Stop Ruminating After a Conversation",
+    text: "Move from replaying interactions to clearer emotional recovery.",
   },
   {
-    href: "/enneagram-test",
-    label: "Enneagram Test",
-    text: "Reflect on core motivations and personality patterns.",
+    href: "/ai-personality-test",
+    label: "AI Personality Test",
+    text: "Understand your traits, strengths and growth direction.",
   },
   {
-    href: "/emotional-intelligence-test",
-    label: "Emotional Intelligence Test",
-    text: "Understand EQ, communication and relationship signals.",
+    href: "/free-personality-test",
+    label: "Free Personality Test",
+    text: "Take a short self discovery test without signup.",
   },
   {
-    href: "/iq-test",
-    label: "IQ Test",
-    text: "Explore cognitive strengths without professional score claims.",
+    href: "/personality-types",
+    label: "Personality Types",
+    text: "Learn how Luckora explains different personality patterns.",
   },
   {
-    href: "/leadership-test",
-    label: "Leadership Test",
-    text: "Discover decision style, teamwork and leadership patterns.",
-  },
-  {
-    href: "/dark-personality-test",
-    label: "Dark Personality Test",
-    text: "Explore complex traits without diagnosis or negative labels.",
-  },
-  {
-    href: "/personality-test-for-students",
-    label: "Personality Test for Students",
-    text: "Explore strengths, learning style and future direction.",
-  },
-  {
-    href: "/personality-test-for-women",
-    label: "Personality Test for Women",
-    text: "Reflect on identity, strengths and personal growth.",
-  },
-  {
-    href: "/personality-test-for-couples",
-    label: "Personality Test for Couples",
-    text: "Use personality insight to understand relationship patterns.",
-  },
-  {
-    href: "/free-personality-test-online",
-    label: "Free Personality Test Online",
-    text: "Start a free online AI personality discovery experience.",
-  },
-  {
-    href: "/ai-personality-quiz",
-    label: "AI Personality Quiz",
-    text: "Discover hidden traits with an AI-powered quiz.",
+    href: "/love-language-test",
+    label: "Love Language Test",
+    text: "Discover how you give love, receive affection and connect.",
   },
 ];
 
@@ -100,18 +70,18 @@ const discoveryPaths = [
 const howSteps = [
   {
     label: "Choose",
-    title: "Pick a discovery path",
-    text: "Start with personality, love language or future self discovery tests.",
+    title: "Start with a real question",
+    text: "Begin with the pattern you want to understand, like overthinking, emotional drain or hidden strengths.",
   },
   {
     label: "Answer",
-    title: "Follow short instinctive questions",
-    text: "Each test is designed to feel lightweight, reflective and easy to finish.",
+    title: "Answer fast, with instinct",
+    text: "The questions are short, lightweight and designed to surface real tendencies without overcomplicating the process.",
   },
   {
     label: "Reflect",
-    title: "Read your AI-style report",
-    text: "Get a clear result with strengths, patterns and next-step guidance.",
+    title: "Get language for what is happening",
+    text: "See your strengths, your friction points and the next-step guidance that helps you move with more clarity.",
   },
 ];
 
@@ -208,10 +178,10 @@ export default function Home() {
           transition={{ duration: 0.75 }}
         >
           <span className="eyebrow">Discovery Paths</span>
-          <h2>Continue into the language of connection.</h2>
+          <h2>Go deeper into relationship patterns.</h2>
           <p>
             After personality, explore how you give love, receive affection and
-            build emotional closeness.
+            why some connection patterns feel safe while others feel draining.
           </p>
           <motion.a
             className="primary-action discovery-path-action"
@@ -238,7 +208,7 @@ export default function Home() {
           </div>
           <div className="orb-caption love-caption">
             <span>Heart Signal</span>
-            <p>Understand the quiet patterns of emotional connection.</p>
+            <p>Understand the relationship patterns that shape emotional safety.</p>
           </div>
         </motion.div>
       </section>
@@ -285,7 +255,7 @@ export default function Home() {
         <div>
           <p>{dictionary.seo.body}</p>
           <div className="seo-link-grid home-seo-link-grid">
-            {seoEntryLinks.slice(0, 6).map((link) => (
+            {seoEntryLinks.slice(0, 4).map((link) => (
               <a href={link.href} key={link.href}>
                 <span>SEO Guide</span>
                 <strong>{link.label}</strong>
@@ -301,10 +271,11 @@ export default function Home() {
 
       <section className="insights-section" id="insights">
         <span className="eyebrow">Vision / Insights</span>
-        <h2>Built for long-term self discovery.</h2>
+        <h2>Built for people who want insight they can use.</h2>
         <p>
-          Luckora will keep expanding from personality and relationship tests
-          into strengths, career direction and future AI-powered reports.
+          Luckora is growing from personality and relationship insight into
+          strengths, friction patterns, growth direction and deeper reports that
+          help people understand both what makes them strong and what keeps them stuck.
         </p>
         <a href="/guides">Explore self discovery guides</a>
       </section>

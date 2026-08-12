@@ -170,15 +170,15 @@ export function LoveLanguageResultCard({
       </div>
 
       <div className="result-section love-report-upgrade">
-        <span>Future Premium Report</span>
-        <h2>Want a deeper understanding of your relationship style?</h2>
+        <span>Relationship Insight</span>
+        <h2>Want to understand your relationship style more deeply?</h2>
         <p>
-          Unlock your full AI Love Report to explore emotional patterns,
-          relationship needs, communication habits and growth prompts in more
-          depth.
+          Use your result as a conversation starter. The best next step is to
+          reflect on how you give love, what makes you feel safe and how your
+          needs show up in real relationships.
         </p>
-        <a aria-disabled="true" href="#love-report-coming-soon">
-          Unlock your full AI Love Report
+        <a className="primary-action" href="/guides">
+          <span>Read Relationship Guides</span>
         </a>
       </div>
 

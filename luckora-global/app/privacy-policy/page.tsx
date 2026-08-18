@@ -29,11 +29,11 @@ export default function PrivacyPolicyPage() {
         },
         {
           title: "Google AdSense and Cookies",
-          body: "Luckora may use Google AdSense to display advertisements. Google and its partners may use cookies, advertising identifiers or similar technologies to serve ads, measure ad performance and help prevent fraud or abuse.",
+          body: "Luckora may use Google AdSense to display advertisements. Google and its partners may use cookies, advertising identifiers or similar technologies to serve ads based on previous visits to this website or other websites, measure ad performance and help prevent fraud or abuse.",
         },
         {
           title: "Advertising Partners",
-          body: "Advertising partners, including Google, may collect or receive information from this website and other websites to provide measurement services and personalized or non-personalized ads. Their use of information is governed by their own privacy policies.",
+          body: "Advertising partners, including Google, may collect or receive information from this website and other websites to provide measurement services and personalized or non-personalized ads. Their use of information is governed by their own privacy policies, and users can review Google's advertising and privacy controls through Google's Ad Settings and privacy resources.",
         },
         {
           title: "How We Use Information",
@@ -41,7 +41,11 @@ export default function PrivacyPolicyPage() {
         },
         {
           title: "User Privacy Choices",
-          body: "Users can control cookies through browser settings, clear local storage, use browser privacy tools or adjust Google ad personalization settings. Blocking cookies may affect analytics, advertising or the ability to keep a result available on the same device.",
+          body: "Users can control cookies through browser settings, clear local storage, use browser privacy tools, adjust Google ad personalization settings or visit aboutads.info to learn more about broader ad personalization opt-out options. Blocking cookies may affect analytics, advertising or the ability to keep a result available on the same device.",
+        },
+        {
+          title: "Privacy Policy References",
+          body: "For more information about how Google uses data when ads or analytics are involved, users can review the Google Privacy Policy, Google Ad Settings and related Google publisher privacy materials. Luckora may update this page as advertising, analytics or consent tools change.",
         },
         {
           title: "Contact Information",

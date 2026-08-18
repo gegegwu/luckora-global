@@ -17,7 +17,7 @@ export const metadata: Metadata = createSeoMetadata({
 
 metadata.robots = {
   index: false,
-  follow: true,
+  follow: false,
 };
 
 export default function ReportLayout({

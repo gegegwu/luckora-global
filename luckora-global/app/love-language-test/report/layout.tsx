@@ -14,6 +14,11 @@ export const metadata: Metadata = createSeoMetadata({
   ],
 });
 
+metadata.robots = {
+  index: false,
+  follow: false,
+};
+
 export default function LoveLanguageReportLayout({
   children,
 }: Readonly<{

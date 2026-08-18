@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@/components/google-analytics";
+import { SiteFooter } from "@/components/site-footer";
 import { createSeoMetadata, siteConfig } from "@/lib/seo";
 import "./globals.css";
 
@@ -31,6 +32,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link href="https://pagead2.googlesyndication.com" rel="preconnect" />
+        <link href="https://pagead2.googlesyndication.com" rel="dns-prefetch" />
+        <meta
+          content="ca-pub-1004666604396408"
+          name="google-adsense-account"
+        />
         <script
           async
           crossOrigin="anonymous"
@@ -40,6 +47,7 @@ export default function RootLayout({
       <body>
         <GoogleAnalytics />
         {children}
+        <SiteFooter />
       </body>
     </html>
   );

@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://luckora.online/sitemap.xml",
+    sitemap: "https://www.luckora.online/sitemap.xml",
   };
 }

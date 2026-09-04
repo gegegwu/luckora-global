@@ -40,7 +40,7 @@ export function SeoHubPage({ hub }: { hub: SeoHub }) {
           <section className="result-section seo-links-section">
             <h2>Featured Guides</h2>
             <div className="seo-link-grid">
-              {collection.slice(0, 6).map((item) => (
+              {collection.map((item) => (
                 <a href={item.path} key={item.path}>
                   <span>{item.label ?? "Guide"}</span>
                   <strong>{item.title}</strong>

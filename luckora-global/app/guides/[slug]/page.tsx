@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { ExploreMore, RelatedTests } from "@/components/seo-link-sections";
+import {
+  ExploreMore,
+  RelatedGuides,
+  RelatedTests,
+} from "@/components/seo-link-sections";
 import { StarField } from "@/components/star-field";
 import { TrackedTestLink } from "@/components/tracked-test-link";
 import {
   breadcrumbSchema,
+  guideArticleSchema,
   jsonLd,
-  webPageSchema,
 } from "@/lib/schema";
 import { getGuideBySlug, guideArticles } from "@/lib/guides";
 import { createSeoMetadata } from "@/lib/seo";
@@ -128,6 +132,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
           </div>
         </section>
 
+        <RelatedGuides currentSlug={guide.slug} />
         <RelatedTests />
         <ExploreMore />
       </article>
@@ -135,7 +140,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
       <script
         dangerouslySetInnerHTML={{
           __html: jsonLd(
-            webPageSchema({
+            guideArticleSchema({
               title: guide.title,
               description: guide.description,
               path: `/guides/${guide.slug}`,

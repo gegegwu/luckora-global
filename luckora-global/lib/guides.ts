@@ -287,6 +287,168 @@ export const guideArticles: GuideArticle[] = [
       },
     ],
   },
+  {
+    slug: "why-am-i-so-sensitive",
+    title: "Why Am I So Sensitive?",
+    description:
+      "Understand why you may feel things deeply, notice subtle emotional shifts, and need more recovery after intense people or situations.",
+    eyebrow: "Sensitivity Guide",
+    intro:
+      "Sensitivity often feels confusing when you only notice its cost. You may react strongly, replay small moments or feel affected by moods other people seem to miss. But sensitivity is not automatically weakness. It is a processing style that needs clearer structure and better protection.",
+    ctaLabel: "Take the Personality Test",
+    ctaPath: "/test",
+    sections: [
+      {
+        title: "What sensitivity can look like",
+        body:
+          "Sensitivity can show up as emotional depth, quick awareness of tone, strong reactions to conflict, rich inner processing or needing quiet time after social intensity. It may also mean your body responds before your mind has words for what changed.",
+        bullets: [
+          "You notice tone changes quickly",
+          "Conflict stays with you longer than expected",
+          "You need recovery after emotionally intense situations",
+          "You pick up on details others miss",
+        ],
+      },
+      {
+        title: "Why you may feel more than other people",
+        body:
+          "Some people process emotional and environmental information more deeply. That can make ordinary situations feel crowded with meaning. If you also learned to monitor people for safety, approval or consistency, sensitivity can become even more active.",
+      },
+      {
+        title: "When sensitivity becomes exhausting",
+        body:
+          "Sensitivity becomes draining when every signal feels urgent. You may over-explain, over-adapt or keep replaying interactions because your mind is trying to create certainty. The problem is not the sensitivity itself, but the lack of boundaries around what you absorb.",
+      },
+      {
+        title: "How to work with sensitivity",
+        body:
+          "Start by naming what you noticed, separating facts from interpretation and giving yourself recovery before making decisions. Sensitive people often make better choices when they stop treating every emotional signal as an emergency.",
+        bullets: [
+          "Name the signal without judging it",
+          "Check what is fact and what is interpretation",
+          "Reduce exposure to repeated emotional confusion",
+          "Use sensitivity as information, not command",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "how-to-find-your-personality-type",
+    title: "How to Find Your Personality Type",
+    description:
+      "Learn how to use personality tests, repeated behavior patterns, strengths, stress responses and relationship habits to understand your type.",
+    eyebrow: "Personality Type Guide",
+    intro:
+      "Finding your personality type is more useful when it explains real patterns, not when it gives you a label to memorize. The strongest type insight connects how you think, what gives you energy, what drains you and how you act under pressure.",
+    ctaLabel: "Take the Personality Test",
+    ctaPath: "/tests/personality-test",
+    sections: [
+      {
+        title: "Do not start with the label",
+        body:
+          "A personality label can be helpful, but it should come after pattern recognition. If you chase the perfect label first, you may ignore the real evidence in your habits, choices and stress responses.",
+      },
+      {
+        title: "Look for repeated patterns",
+        body:
+          "Your personality type is easier to understand when you look at what repeats across different contexts. Notice how you solve problems, how you recover, what kind of work gives you energy and what emotional patterns keep returning.",
+        bullets: [
+          "How you make decisions",
+          "What kind of feedback affects you most",
+          "How you behave under pressure",
+          "What people repeatedly rely on you for",
+        ],
+      },
+      {
+        title: "Use tests as mirrors, not verdicts",
+        body:
+          "A useful personality test gives language to patterns you can recognize. It should help you reflect more clearly, not make you feel boxed in. The best result is one that explains both strengths and friction points.",
+      },
+      {
+        title: "Connect personality to action",
+        body:
+          "The point of finding your type is not only self-description. It is better decision-making. Once you understand your pattern, you can choose work, relationships and recovery habits that fit your actual energy.",
+      },
+    ],
+  },
+  {
+    slug: "how-to-know-what-you-are-good-at",
+    title: "How to Know What You Are Good At",
+    description:
+      "Identify natural strengths by looking at repeated usefulness, energy patterns, feedback, problem-solving style and what feels obvious to you.",
+    eyebrow: "Strength Discovery Guide",
+    intro:
+      "Many people do not know what they are good at because their strongest abilities feel too normal from the inside. The goal is to notice repeated evidence instead of waiting for one dramatic talent signal.",
+    ctaLabel: "Take the Personality Test",
+    ctaPath: "/test",
+    sections: [
+      {
+        title: "Strengths often feel ordinary",
+        body:
+          "The things you do naturally may not feel impressive to you. You may explain clearly, notice patterns quickly, calm people down or organize chaos without realizing those are useful strengths.",
+      },
+      {
+        title: "Track repeated usefulness",
+        body:
+          "A strength usually appears more than once. Look at what people ask you for, what problems you understand faster than others and what kind of contribution makes situations better.",
+        bullets: [
+          "What do people ask you to help with?",
+          "What problems feel easier for you to read?",
+          "What gives you energy after effort?",
+          "What do others thank you for repeatedly?",
+        ],
+      },
+      {
+        title: "Separate skill from strength",
+        body:
+          "A skill is something you can learn. A strength is a pattern that helps you learn, adapt or contribute. You can build many skills, but your strongest growth usually comes from skills that fit your natural pattern.",
+      },
+      {
+        title: "Turn strengths into direction",
+        body:
+          "Once you identify a strength, ask where it can create value. Communication can become teaching, content, leadership or support. Pattern recognition can become research, strategy, product thinking or analysis.",
+      },
+    ],
+  },
+  {
+    slug: "why-do-i-feel-lost-in-life",
+    title: "Why Do I Feel Lost in Life?",
+    description:
+      "Explore why you may feel directionless, disconnected from your strengths, or unsure what next step fits your personality and energy.",
+    eyebrow: "Life Direction Guide",
+    intro:
+      "Feeling lost does not always mean you have no path. Sometimes it means the old path no longer fits, your strengths are underused or your next step needs more clarity before it can feel real.",
+    ctaLabel: "Take the Personality Test",
+    ctaPath: "/tests/personality-test",
+    sections: [
+      {
+        title: "Feeling lost is often a signal",
+        body:
+          "The feeling can appear when your current routines do not match your energy, values or growth stage. It may also happen when you have too many possible directions and no clear way to choose between them.",
+      },
+      {
+        title: "Why clarity gets blocked",
+        body:
+          "Clarity gets harder when you compare yourself constantly, ignore your own strengths or only choose paths that look impressive from the outside. A direction has to fit your actual pattern, not just your ideal image.",
+        bullets: [
+          "Too many options without a filter",
+          "Comparing your path to other people",
+          "Ignoring what gives you energy",
+          "Choosing based on pressure instead of fit",
+        ],
+      },
+      {
+        title: "Start with your repeated patterns",
+        body:
+          "Instead of asking what your whole life should become, look at what repeats. What kinds of problems interest you? What kind of people do you understand? What strengths keep appearing even when you are uncertain?",
+      },
+      {
+        title: "Choose the next useful step",
+        body:
+          "You do not need total life certainty to move. Choose one step that tests a direction, uses a real strength or gives you clearer information. Momentum often creates more clarity than thinking alone.",
+      },
+    ],
+  },
 ];
 
 export function getGuideBySlug(slug: string) {

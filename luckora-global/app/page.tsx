@@ -5,35 +5,29 @@ import { useEffect, useMemo } from "react";
 import { CosmicOrb } from "@/components/cosmic-orb";
 import { StarField } from "@/components/star-field";
 import { trackHomepageView, trackStartTestClick } from "@/lib/analytics";
+import { guideArticles } from "@/lib/guides";
 import { getDictionary } from "@/lib/i18n";
 import { jsonLd, organizationSchema, websiteSchema } from "@/lib/schema";
 
-const seoEntryLinks = [
-  {
-    href: "/guides/why-do-i-overthink-everything",
-    label: "Why Do I Overthink Everything?",
-    text: "Understand why reflective people get stuck in mental loops.",
-  },
-  {
-    href: "/guides/why-do-certain-people-drain-me",
-    label: "Why Do Certain People Drain Me?",
-    text: "Explore relationship patterns that create emotional depletion.",
-  },
-  {
-    href: "/guides/high-sensitivity-and-emotional-rumination",
-    label: "High Sensitivity and Emotional Rumination",
-    text: "Learn how deep feeling turns into emotional replay and fatigue.",
-  },
-  {
-    href: "/guides/how-to-understand-your-hidden-strengths",
-    label: "How to Understand Your Hidden Strengths",
-    text: "Identify the strengths already shaping your choices and growth.",
-  },
-  {
-    href: "/guides/how-to-stop-ruminating-after-a-conversation",
-    label: "How to Stop Ruminating After a Conversation",
-    text: "Move from replaying interactions to clearer emotional recovery.",
-  },
+const priorityGuideSlugs = [
+  "why-do-i-overthink-everything",
+  "why-am-i-so-sensitive",
+  "how-to-find-your-personality-type",
+  "how-to-know-what-you-are-good-at",
+  "why-do-i-feel-lost-in-life",
+  "why-do-certain-people-drain-me",
+];
+
+const seoEntryLinks = priorityGuideSlugs
+  .map((slug) => guideArticles.find((guide) => guide.slug === slug))
+  .filter((guide): guide is (typeof guideArticles)[number] => Boolean(guide))
+  .map((guide) => ({
+    href: `/guides/${guide.slug}`,
+    label: guide.title,
+    text: guide.description,
+  }));
+
+const seoUtilityLinks = [
   {
     href: "/ai-personality-test",
     label: "AI Personality Test",
@@ -255,9 +249,16 @@ export default function Home() {
         <div>
           <p>{dictionary.seo.body}</p>
           <div className="seo-link-grid home-seo-link-grid">
-            {seoEntryLinks.slice(0, 4).map((link) => (
+            {seoEntryLinks.map((link) => (
               <a href={link.href} key={link.href}>
                 <span>SEO Guide</span>
+                <strong>{link.label}</strong>
+                <p>{link.text}</p>
+              </a>
+            ))}
+            {seoUtilityLinks.map((link) => (
+              <a href={link.href} key={link.href}>
+                <span>Test Page</span>
                 <strong>{link.label}</strong>
                 <p>{link.text}</p>
               </a>

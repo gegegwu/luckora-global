@@ -53,11 +53,13 @@ export function webApplicationSchema(test: TestConfig) {
 }
 
 export function testsItemListSchema() {
+  const availableTests = testConfigs.filter((test) => test.status === "available");
+
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Luckora AI Self Discovery Tests",
-    itemListElement: testConfigs.map((test, index) => ({
+    itemListElement: availableTests.map((test, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: test.title,
@@ -138,6 +140,33 @@ export function webPageSchema({
       name: siteConfig.name,
       url: siteConfig.baseUrl,
     },
+  };
+}
+
+export function guideArticleSchema({
+  title,
+  description,
+  path,
+}: {
+  title: string;
+  description: string;
+  path: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    mainEntityOfPage: `${siteConfig.baseUrl}${path}`,
+    author: {
+      "@type": "Organization",
+      name: siteConfig.name,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+    },
+    inLanguage: "en",
   };
 }
 

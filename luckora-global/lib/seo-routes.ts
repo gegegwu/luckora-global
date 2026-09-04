@@ -1,3 +1,5 @@
+import { guideArticles } from "@/lib/guides";
+
 export type SeoHub = {
   path: string;
   title: string;
@@ -65,50 +67,12 @@ export const seoHubs: SeoHub[] = [
 export const futureSeoCollections: Record<string, SeoCollectionItem[]> = {
   careers: [],
   strengths: [],
-  guides: [
-    {
-      path: "/guides/why-do-i-overthink-everything",
-      title: "Why Do I Overthink Everything?",
-      description:
-        "Understand the loop between sensitivity, uncertainty and mental replay.",
-      label: "Problem Guide",
-    },
-    {
-      path: "/guides/how-to-understand-your-hidden-strengths",
-      title: "How to Understand Your Hidden Strengths",
-      description:
-        "Learn how to identify the strengths already shaping your life and decisions.",
-      label: "Strengths Guide",
-    },
-    {
-      path: "/guides/why-do-certain-people-drain-me",
-      title: "Why Do Certain People Drain Me?",
-      description:
-        "Learn how emotional mismatch, weak boundaries and inconsistency create depletion.",
-      label: "Relationship Guide",
-    },
-    {
-      path: "/guides/how-to-stop-ruminating-after-a-conversation",
-      title: "How to Stop Ruminating After a Conversation",
-      description:
-        "Move from replaying interactions toward clearer emotional recovery.",
-      label: "Recovery Guide",
-    },
-    {
-      path: "/guides/high-sensitivity-and-emotional-rumination",
-      title: "High Sensitivity and Emotional Rumination",
-      description:
-        "Explore how deep feeling turns into emotional loops and how to reduce the drain.",
-      label: "Sensitivity Guide",
-    },
-    {
-      path: "/guides/signs-your-sensitivity-is-a-strength",
-      title: "Signs Your Sensitivity Is a Strength",
-      description:
-        "Understand how sensitivity can create empathy, accuracy and strong relational insight.",
-      label: "Strength Pattern Guide",
-    },
-  ],
+  guides: guideArticles.map((guide) => ({
+    path: `/guides/${guide.slug}`,
+    title: guide.title,
+    description: guide.description,
+    label: guide.eyebrow,
+  })),
   reports: [],
 };
 

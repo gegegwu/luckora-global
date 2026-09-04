@@ -1,3 +1,4 @@
+import { guideArticles } from "@/lib/guides";
 import { personalityProfiles } from "@/lib/personalities";
 import { testConfigs } from "@/lib/tests";
 
@@ -42,6 +43,27 @@ export function RelatedPersonalityTypes({
             <span>Personality Type</span>
             <strong>{profile.name}</strong>
             <p>{profile.emotionalLine}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+export function RelatedGuides({ currentSlug }: { currentSlug?: string }) {
+  const relatedGuides = guideArticles
+    .filter((guide) => guide.slug !== currentSlug)
+    .slice(0, 4);
+
+  return (
+    <section className="result-section seo-links-section">
+      <h2>Related Guides</h2>
+      <div className="seo-link-grid">
+        {relatedGuides.map((guide) => (
+          <a href={`/guides/${guide.slug}`} key={guide.slug}>
+            <span>{guide.eyebrow}</span>
+            <strong>{guide.title}</strong>
+            <p>{guide.description}</p>
           </a>
         ))}
       </div>

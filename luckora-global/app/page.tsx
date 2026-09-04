@@ -11,11 +11,11 @@ import { jsonLd, organizationSchema, websiteSchema } from "@/lib/schema";
 
 const priorityGuideSlugs = [
   "why-do-i-overthink-everything",
+  "why-do-i-overthink-relationships",
+  "why-do-i-feel-emotionally-drained",
   "why-am-i-so-sensitive",
+  "how-to-stop-overthinking-at-night",
   "how-to-find-your-personality-type",
-  "how-to-know-what-you-are-good-at",
-  "why-do-i-feel-lost-in-life",
-  "why-do-certain-people-drain-me",
 ];
 
 const seoEntryLinks = priorityGuideSlugs

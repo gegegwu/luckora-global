@@ -449,6 +449,318 @@ export const guideArticles: GuideArticle[] = [
       },
     ],
   },
+  {
+    slug: "why-do-i-overthink-relationships",
+    title: "Why Do I Overthink Relationships?",
+    description:
+      "Understand why relationships trigger overthinking, how uncertainty creates mental loops, and how to separate real signals from fear.",
+    eyebrow: "Relationship Guide",
+    intro:
+      "Relationship overthinking usually starts when connection feels important but uncertain. A message, tone change or delayed reply can become a question your mind keeps reopening because it wants safety, clarity and reassurance.",
+    ctaLabel: "Take the Love Language Test",
+    ctaPath: "/love-language-test",
+    sections: [
+      {
+        title: "Why relationships create mental loops",
+        body:
+          "Relationships involve emotion, timing, expectation and risk. When you care about someone, small signals can feel larger because they seem connected to rejection, closeness or whether the relationship is still secure.",
+        bullets: [
+          "You replay text messages or conversations",
+          "You look for hidden meaning in tone",
+          "You worry that affection has changed",
+          "You feel responsible for keeping the connection stable",
+        ],
+      },
+      {
+        title: "The difference between intuition and anxiety",
+        body:
+          "Intuition usually feels clear and specific. Anxiety often feels urgent, repetitive and hard to satisfy. If a thought keeps demanding more checking but never gives you more useful information, it is probably rumination rather than insight.",
+      },
+      {
+        title: "How love language patterns affect overthinking",
+        body:
+          "People who need words may overthink silence. People who need quality time may overthink distance. People who value acts of service may overthink inconsistency. Understanding your emotional connection style can make the trigger easier to name.",
+      },
+      {
+        title: "What to do next",
+        body:
+          "Write down what actually happened, what you are afraid it means and what information is missing. Then decide whether you need a direct conversation, a boundary or simply time to calm your nervous system before interpreting the relationship.",
+      },
+    ],
+  },
+  {
+    slug: "why-do-i-feel-emotionally-drained",
+    title: "Why Do I Feel Emotionally Drained?",
+    description:
+      "Learn why emotional exhaustion happens, how people and environments drain your energy, and how to rebuild clarity without self-blame.",
+    eyebrow: "Emotional Energy Guide",
+    intro:
+      "Feeling emotionally drained is not always about one dramatic event. It can come from repeated small moments where you absorb tension, over-adapt, hold back your needs or stay too long in situations that require constant emotional monitoring.",
+    ctaLabel: "Take the Personality Test",
+    ctaPath: "/test",
+    sections: [
+      {
+        title: "Common causes of emotional drain",
+        body:
+          "Emotional drain often comes from unclear boundaries, high responsibility, relationship uncertainty, conflict, overstimulation or trying to manage other people's reactions before you manage your own needs.",
+        bullets: [
+          "You absorb other people's moods",
+          "You say yes when you need recovery",
+          "You keep explaining yourself to be understood",
+          "You spend energy preventing conflict",
+        ],
+      },
+      {
+        title: "Why sensitive people drain faster",
+        body:
+          "Sensitive or reflective people may process more detail from every interaction. That can be valuable, but without recovery it creates emotional backlog. The mind keeps sorting signals even after the situation ends.",
+      },
+      {
+        title: "How to identify your drain pattern",
+        body:
+          "Track when your energy drops. Look at the people, places, topics and expectations involved. The pattern usually reveals whether the drain comes from overstimulation, responsibility, emotional mismatch or unclear limits.",
+      },
+      {
+        title: "How to recover more effectively",
+        body:
+          "Recovery works better when it is specific. If the drain came from people, reduce input. If it came from decisions, simplify choices. If it came from rumination, move thoughts into writing and end with one next action.",
+      },
+    ],
+  },
+  {
+    slug: "how-to-stop-overthinking-at-night",
+    title: "How to Stop Overthinking at Night",
+    description:
+      "Understand why thoughts get louder at night and learn practical ways to quiet mental loops before sleep.",
+    eyebrow: "Rumination Guide",
+    intro:
+      "Night overthinking often appears when the day finally becomes quiet. With fewer distractions, unresolved emotions, unfinished decisions and relationship uncertainty can rise to the surface and compete for attention.",
+    ctaLabel: "Take the Personality Test",
+    ctaPath: "/test",
+    sections: [
+      {
+        title: "Why thoughts get louder at night",
+        body:
+          "During the day, activity can keep worries pushed aside. At night, your mind may try to process everything at once. This is especially common for reflective people who need closure before they can fully rest.",
+      },
+      {
+        title: "What keeps the loop alive",
+        body:
+          "Night rumination often stays active because the mind is trying to solve questions that cannot be solved immediately. It asks for certainty, but the body actually needs a signal that the issue can wait.",
+        bullets: [
+          "Unfinished conversations",
+          "Fear about tomorrow",
+          "Self-criticism about the day",
+          "Trying to solve emotional uncertainty in bed",
+        ],
+      },
+      {
+        title: "Create a closing ritual",
+        body:
+          "A useful closing ritual gives the mind a place to put open loops. Write the unresolved thought, name one possible next step and decide when you will return to it. This helps separate reflection time from sleep time.",
+      },
+      {
+        title: "Use body-based recovery",
+        body:
+          "If thinking has become repetitive, more analysis may not help. Slow breathing, low light, stretching or a quiet routine can tell the nervous system that it is safe to stop scanning for problems tonight.",
+      },
+    ],
+  },
+  {
+    slug: "what-are-my-hidden-strengths",
+    title: "What Are My Hidden Strengths?",
+    description:
+      "Find hidden strengths by noticing what feels natural, what others rely on you for, and what kind of value you create repeatedly.",
+    eyebrow: "Strengths Guide",
+    intro:
+      "Hidden strengths are easy to miss because they often feel obvious from the inside. You may assume everyone notices the same things, solves problems the same way or carries the same kind of emotional intelligence.",
+    ctaLabel: "Take the Personality Test",
+    ctaPath: "/tests/personality-test",
+    sections: [
+      {
+        title: "Hidden strengths are repeated patterns",
+        body:
+          "A hidden strength is not a random compliment. It is a repeated pattern of usefulness. It may show up in how you explain, observe, organize, support, create, decide or make people feel understood.",
+      },
+      {
+        title: "Where to look for evidence",
+        body:
+          "Look at what people thank you for, what responsibilities naturally come to you and what problems you can improve without forcing yourself to become someone else.",
+        bullets: [
+          "What feels easy but valuable?",
+          "What do people trust you with?",
+          "What drains others less than it drains you?",
+          "What kind of work makes you more focused?",
+        ],
+      },
+      {
+        title: "Why strengths can be invisible",
+        body:
+          "People often overlook strengths that were expected of them early in life. If you became the responsible one, the listener, the problem solver or the emotional translator, you may treat those strengths as obligations instead of abilities.",
+      },
+      {
+        title: "Turn hidden strengths into choices",
+        body:
+          "Once a strength is visible, use it to choose better projects, relationships and growth goals. Strengths become more valuable when they guide decisions instead of staying buried inside automatic behavior.",
+      },
+    ],
+  },
+  {
+    slug: "personality-test-for-career-direction",
+    title: "Personality Test for Career Direction",
+    description:
+      "Learn how personality tests can clarify career direction by revealing work energy, decision style, strengths and environments that fit.",
+    eyebrow: "Career Direction Guide",
+    intro:
+      "Career direction is not only about job titles. It is about the kind of problems, people, pace and responsibility that fit your personality well enough to repeat without constant friction.",
+    ctaLabel: "Take the Personality Test",
+    ctaPath: "/tests/personality-test",
+    sections: [
+      {
+        title: "Why personality matters for work",
+        body:
+          "Two people can have the same skill but very different work energy. One may thrive in ambiguity while another performs best with structure. Personality helps explain which environments make your strengths easier to use.",
+      },
+      {
+        title: "What a career-focused personality test can reveal",
+        body:
+          "A useful test can point to decision rhythm, collaboration style, creativity, analysis, leadership, communication and recovery needs. These signals help narrow career paths by fit rather than status alone.",
+        bullets: [
+          "How you solve problems",
+          "Where you create value naturally",
+          "What work pace fits you",
+          "Which environments drain your strengths",
+        ],
+      },
+      {
+        title: "Avoid choosing only by title",
+        body:
+          "A role can sound impressive but still fight your natural pattern every day. Better career direction comes from matching your strengths to the work behind the title, not only the title itself.",
+      },
+      {
+        title: "Use personality as a starting point",
+        body:
+          "A personality test should not make career decisions for you. It should give you better questions: what should you test next, what should you stop forcing and what strengths deserve more practical development?",
+      },
+    ],
+  },
+  {
+    slug: "what-is-a-self-discovery-test",
+    title: "What Is a Self Discovery Test?",
+    description:
+      "Understand how self discovery tests work, what they can reveal, and how to use results without turning them into fixed labels.",
+    eyebrow: "Self Discovery Guide",
+    intro:
+      "A self discovery test helps you reflect on patterns that may be hard to see clearly from the inside. The value is not the label itself. The value is better language for your strengths, needs, friction and next steps.",
+    ctaLabel: "Explore Luckora Tests",
+    ctaPath: "/tests",
+    sections: [
+      {
+        title: "What self discovery tests measure",
+        body:
+          "Different tests focus on different signals: personality, strengths, emotional needs, relationship style, career direction or values. Good tests translate repeated answers into patterns you can recognize.",
+      },
+      {
+        title: "What a good result should do",
+        body:
+          "A useful result should feel specific enough to reflect real behavior and practical enough to help you choose a next step. It should explain both strengths and growth challenges.",
+        bullets: [
+          "Give language to real patterns",
+          "Avoid pretending to diagnose you",
+          "Show strengths and friction",
+          "Connect insight to practical reflection",
+        ],
+      },
+      {
+        title: "How to use results well",
+        body:
+          "Use the result as a mirror, not a verdict. Ask what part feels accurate, what part surprises you and what small decision could become easier if you took the pattern seriously.",
+      },
+      {
+        title: "Why Luckora focuses on action",
+        body:
+          "Luckora is designed to connect insight with movement. The goal is not endless self-analysis. The goal is clearer language, better choices and more confidence in the next useful step.",
+      },
+    ],
+  },
+  {
+    slug: "how-to-understand-your-love-language",
+    title: "How to Understand Your Love Language",
+    description:
+      "Learn what love languages can reveal about affection, emotional safety, relationship needs and communication patterns.",
+    eyebrow: "Love Language Guide",
+    intro:
+      "Your love language is not just what feels romantic. It can show how you recognize care, what makes connection feel secure and why certain relationship patterns leave you feeling unseen.",
+    ctaLabel: "Take the Love Language Test",
+    ctaPath: "/love-language-test",
+    sections: [
+      {
+        title: "What love languages can reveal",
+        body:
+          "Love languages point to the kind of affection that lands most clearly for you. They can involve words, time, service, gifts or touch, but the deeper question is what makes you feel emotionally remembered.",
+      },
+      {
+        title: "Why people misunderstand love languages",
+        body:
+          "A love language is not a demand that other people always behave one way. It is a clue about what helps you feel connected. Healthy relationships still need communication, flexibility and mutual care.",
+      },
+      {
+        title: "How love language mismatch feels",
+        body:
+          "Mismatch can happen when one person shows care in a way the other person does not easily recognize. One person may offer practical help while the other needs words. Neither is wrong, but the signal can get missed.",
+        bullets: [
+          "You care but the other person does not feel it",
+          "You feel unseen even when effort exists",
+          "Small gestures matter more than expected",
+          "Affection feels inconsistent or hard to read",
+        ],
+      },
+      {
+        title: "Use your result as a conversation starter",
+        body:
+          "The best use of a love language result is clearer conversation. It can help you explain what makes you feel valued and ask what kind of care feels most meaningful to the other person.",
+      },
+    ],
+  },
+  {
+    slug: "why-do-i-need-so-much-reassurance",
+    title: "Why Do I Need So Much Reassurance?",
+    description:
+      "Explore why reassurance seeking happens, how uncertainty affects emotional safety, and how to build steadier trust in yourself.",
+    eyebrow: "Emotional Safety Guide",
+    intro:
+      "Needing reassurance does not mean you are weak or demanding. It often means uncertainty feels emotionally expensive, especially when relationships, decisions or self-worth feel unstable.",
+    ctaLabel: "Take the Personality Test",
+    ctaPath: "/test",
+    sections: [
+      {
+        title: "Why reassurance feels necessary",
+        body:
+          "Reassurance gives short-term relief because it lowers uncertainty. The problem is that repeated reassurance can train the mind to need another external answer every time discomfort appears.",
+      },
+      {
+        title: "Common reassurance triggers",
+        body:
+          "Reassurance seeking often appears around relationships, mistakes, decisions, appearance, performance or whether someone is upset with you. The shared pattern is fear that something important is no longer safe.",
+        bullets: [
+          "Waiting for replies",
+          "Worrying you made a mistake",
+          "Feeling unsure about someone's mood",
+          "Doubting your own interpretation",
+        ],
+      },
+      {
+        title: "How to build internal steadiness",
+        body:
+          "Instead of asking for reassurance immediately, pause and name what you are afraid is true. Then ask what evidence you have, what evidence is missing and what action would still be wise even without perfect certainty.",
+      },
+      {
+        title: "When reassurance can still be healthy",
+        body:
+          "It is healthy to ask for clarity in close relationships. The goal is not to never need reassurance. The goal is to avoid making reassurance the only way you can feel safe.",
+      },
+    ],
+  },
 ];
 
 export function getGuideBySlug(slug: string) {

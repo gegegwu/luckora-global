@@ -761,6 +761,318 @@ export const guideArticles: GuideArticle[] = [
       },
     ],
   },
+  {
+    slug: "why-do-i-feel-like-i-dont-know-myself",
+    title: "Why Do I Feel Like I Don't Know Myself?",
+    description:
+      "Explore why your identity may feel unclear, how pressure and comparison disconnect you from yourself, and how to rebuild self-understanding.",
+    eyebrow: "Identity Guide",
+    intro:
+      "Feeling like you do not know yourself can happen when you have spent a long time adapting to other people, chasing external expectations or moving through life without enough space to notice what actually feels true.",
+    ctaLabel: "Take the Personality Test",
+    ctaPath: "/tests/personality-test",
+    sections: [
+      {
+        title: "Why identity can feel unclear",
+        body:
+          "Identity becomes harder to feel when your choices are shaped mostly by pressure, comparison or survival. You may know what is expected of you, but not what gives you energy, meaning or a sense of internal alignment.",
+        bullets: [
+          "You change yourself around different people",
+          "You struggle to name what you want",
+          "You feel disconnected from your strengths",
+          "You compare your path constantly",
+        ],
+      },
+      {
+        title: "Self-knowledge comes from patterns",
+        body:
+          "You do not need one perfect answer to understand yourself. Look for repeated signals: what you avoid, what you return to, what kind of problems interest you and what makes you feel more like yourself after the effort.",
+      },
+      {
+        title: "Why tests can help",
+        body:
+          "A self discovery test can give language to patterns that feel scattered. The result should not define you forever, but it can create a starting point for reflection and clearer decisions.",
+      },
+      {
+        title: "How to reconnect with yourself",
+        body:
+          "Start small. Notice what drains you, what steadies you and what choices feel less performative. Self-understanding usually returns through repeated honest observation, not one dramatic breakthrough.",
+      },
+    ],
+  },
+  {
+    slug: "how-to-stop-second-guessing-yourself",
+    title: "How to Stop Second Guessing Yourself",
+    description:
+      "Understand why you second guess decisions and learn how to build more trust in your judgment without needing perfect certainty.",
+    eyebrow: "Decision Clarity Guide",
+    intro:
+      "Second guessing often feels like careful thinking, but it becomes draining when every choice reopens after you make it. The goal is not reckless confidence. The goal is enough trust to move without restarting the same decision repeatedly.",
+    ctaLabel: "Take the Personality Test",
+    ctaPath: "/test",
+    sections: [
+      {
+        title: "Why second guessing happens",
+        body:
+          "You may second guess yourself because mistakes feel costly, feedback affects you deeply or you learned to seek approval before trusting your own read. The habit can become automatic even when the decision is small.",
+      },
+      {
+        title: "Signs you are stuck in a decision loop",
+        body:
+          "A decision loop keeps asking for more certainty even after you already have enough information to choose. It often creates research, reassurance seeking and mental replay without creating better judgment.",
+        bullets: [
+          "You keep reopening the same choice",
+          "You ask many people for the same reassurance",
+          "You feel temporary relief, then doubt returns",
+          "You confuse discomfort with a wrong decision",
+        ],
+      },
+      {
+        title: "Use a decision boundary",
+        body:
+          "Set a clear boundary before choosing: what information matters, when the decision must be made and what good-enough evidence looks like. This protects you from endless checking.",
+      },
+      {
+        title: "Build trust after the decision",
+        body:
+          "After choosing, track what you learn instead of judging whether the choice was perfect. Self-trust grows when you prove that you can respond to outcomes, not when you avoid uncertainty completely.",
+      },
+    ],
+  },
+  {
+    slug: "why-do-i-absorb-other-peoples-emotions",
+    title: "Why Do I Absorb Other People's Emotions?",
+    description:
+      "Learn why you may take on other people's moods, how empathy can become overload, and how to keep compassion without losing yourself.",
+    eyebrow: "Empathy Guide",
+    intro:
+      "Absorbing other people's emotions can feel like your nervous system is always listening. You may enter a room and sense tension quickly, then carry that tension even when it is not yours to solve.",
+    ctaLabel: "Take the Personality Test",
+    ctaPath: "/test",
+    sections: [
+      {
+        title: "Why emotional absorption happens",
+        body:
+          "People who are empathic, sensitive or used to monitoring others often notice emotional changes quickly. That awareness can become overload when you feel responsible for fixing every mood you detect.",
+      },
+      {
+        title: "Empathy versus emotional ownership",
+        body:
+          "Empathy means you can recognize or care about what someone feels. Emotional ownership means you treat their feeling as your responsibility. The second pattern is usually what creates exhaustion.",
+        bullets: [
+          "You feel guilty when others are upset",
+          "You adjust yourself before anyone asks",
+          "You leave conversations carrying their mood",
+          "You struggle to know what you feel separately",
+        ],
+      },
+      {
+        title: "How boundaries protect empathy",
+        body:
+          "Boundaries do not make you less caring. They help you keep enough separation to respond wisely. You can notice someone's emotion without making your body the place where it has to be solved.",
+      },
+      {
+        title: "A simple reset practice",
+        body:
+          "After an intense interaction, ask: what is mine, what is theirs and what action is actually needed? This turns emotional absorption into information instead of silent responsibility.",
+      },
+    ],
+  },
+  {
+    slug: "am-i-an-introvert-or-just-drained",
+    title: "Am I an Introvert or Just Drained?",
+    description:
+      "Understand the difference between introversion, emotional exhaustion, overstimulation and relationship patterns that make social energy confusing.",
+    eyebrow: "Social Energy Guide",
+    intro:
+      "Not everyone who feels drained is simply an introvert. Sometimes you are introverted. Sometimes you are overstimulated. Sometimes specific people, roles or expectations are draining you more than social life itself.",
+    ctaLabel: "Take the Personality Test",
+    ctaPath: "/tests/personality-test",
+    sections: [
+      {
+        title: "What introversion usually means",
+        body:
+          "Introversion often means you recover through quieter environments, deeper focus or smaller circles. It does not always mean you dislike people. It means your energy system responds differently to stimulation.",
+      },
+      {
+        title: "What emotional drain feels like",
+        body:
+          "Emotional drain often feels heavier than normal tiredness. You may feel foggy, tense, resentful or unlike yourself after certain interactions because they require too much monitoring or adaptation.",
+        bullets: [
+          "You enjoy people but recover slowly",
+          "Certain relationships drain you more than others",
+          "You feel better alone but still want connection",
+          "You are tired from performing, not simply socializing",
+        ],
+      },
+      {
+        title: "How to tell the difference",
+        body:
+          "Ask whether all social contact drains you equally or whether specific patterns do. If safe, low-pressure connection feels good, the issue may be emotional mismatch or overstimulation rather than introversion alone.",
+      },
+      {
+        title: "Build a better energy rhythm",
+        body:
+          "Protect recovery time, choose clearer relationships and stop treating every social need as a personality flaw. Your social rhythm should fit your nervous system and your actual connection needs.",
+      },
+    ],
+  },
+  {
+    slug: "why-do-i-feel-stuck-even-when-life-is-fine",
+    title: "Why Do I Feel Stuck Even When Life Is Fine?",
+    description:
+      "Explore why life can look fine externally while you feel blocked internally, and how to reconnect with direction, growth and agency.",
+    eyebrow: "Growth Guide",
+    intro:
+      "Feeling stuck does not always mean something is visibly wrong. Sometimes life is stable but too small for your next stage. Sometimes your strengths are underused, your routine is automatic or your deeper goals have gone quiet.",
+    ctaLabel: "Take the Personality Test",
+    ctaPath: "/tests/personality-test",
+    sections: [
+      {
+        title: "Why external stability can still feel empty",
+        body:
+          "A life can be functional without feeling alive. If your days meet basic expectations but do not use your curiosity, strengths or values, you may feel stuck even when nothing looks broken.",
+      },
+      {
+        title: "Signs the stuck feeling is about growth",
+        body:
+          "Growth stuckness often feels like restlessness, boredom, low motivation or the sense that you are repeating a version of yourself that no longer fits.",
+        bullets: [
+          "You are not in crisis but feel flat",
+          "Your routine works but feels automatic",
+          "You want change but cannot name it",
+          "Your strengths feel unused",
+        ],
+      },
+      {
+        title: "Look for underused energy",
+        body:
+          "Instead of asking what is wrong, ask what part of you has no place to go. Creativity, leadership, learning, connection or independence may need a clearer outlet.",
+      },
+      {
+        title: "Choose one experiment",
+        body:
+          "The fastest way to get unstuck is not a perfect life plan. It is one experiment that gives you new information: a project, conversation, skill, routine change or test of a direction.",
+      },
+    ],
+  },
+  {
+    slug: "free-ai-personality-test-online",
+    title: "Free AI Personality Test Online",
+    description:
+      "Take a free AI personality test online and learn how AI-assisted self discovery can reveal traits, strengths and growth patterns.",
+    eyebrow: "Personality Test Guide",
+    intro:
+      "A free AI personality test can help you start self discovery without signup or pressure. The useful part is not magic prediction. It is structured reflection that turns your answers into clearer patterns.",
+    ctaLabel: "Start Free Personality Test",
+    ctaPath: "/test",
+    sections: [
+      {
+        title: "What an AI personality test does",
+        body:
+          "An AI personality test maps your answers into themes such as creativity, analysis, connection, leadership, emotional processing and growth direction. It helps you see patterns that may be hard to organize alone.",
+      },
+      {
+        title: "What makes a free test useful",
+        body:
+          "A free test is useful when it gives a clear result, practical language and enough nuance to help you reflect. It should not require you to believe a fixed label or make serious decisions from one result.",
+        bullets: [
+          "No signup required",
+          "Short and easy to finish",
+          "Clear personality result",
+          "Practical reflection prompts",
+        ],
+      },
+      {
+        title: "How to read your result",
+        body:
+          "Focus on the parts that explain repeated behavior. A good result should help you understand where you create value, where you get stuck and what kind of next step fits your natural energy.",
+      },
+      {
+        title: "Why Luckora is built this way",
+        body:
+          "Luckora focuses on identity, strengths and emotional patterns rather than generic labels alone. The goal is to make self discovery feel useful enough to support real decisions.",
+      },
+    ],
+  },
+  {
+    slug: "how-to-choose-a-personality-test",
+    title: "How to Choose a Personality Test",
+    description:
+      "Learn how to choose a personality test that gives useful insight instead of vague labels, shallow results or confusing categories.",
+    eyebrow: "Personality Guide",
+    intro:
+      "There are many personality tests online, but not all of them help you understand yourself. A good test should create clarity about patterns, strengths and next steps, not just give you a label that sounds interesting.",
+    ctaLabel: "Explore Luckora Tests",
+    ctaPath: "/tests",
+    sections: [
+      {
+        title: "Look for practical insight",
+        body:
+          "The best personality test results help you understand how you think, connect, decide and recover. If the result cannot help you make better choices, it may not be very useful.",
+      },
+      {
+        title: "Avoid results that are too vague",
+        body:
+          "A result can feel flattering without being helpful. Watch for descriptions that could apply to almost anyone. Stronger results explain specific patterns, tradeoffs and growth challenges.",
+        bullets: [
+          "Does the result describe behavior?",
+          "Does it explain strengths and friction?",
+          "Does it avoid pretending to diagnose you?",
+          "Does it suggest a useful next step?",
+        ],
+      },
+      {
+        title: "Choose based on your goal",
+        body:
+          "If you want relationship clarity, a love language test may help. If you want self-understanding, a personality test is better. If you want work direction, look for content connected to strengths and career fit.",
+      },
+      {
+        title: "Use more than one signal",
+        body:
+          "No single test should define you completely. Use test results alongside reflection, feedback and repeated life evidence. The goal is better self-understanding, not a perfect category.",
+      },
+    ],
+  },
+  {
+    slug: "how-to-turn-self-awareness-into-action",
+    title: "How to Turn Self Awareness Into Action",
+    description:
+      "Learn how to move from self awareness into practical next steps, better decisions and small behavior changes that actually stick.",
+    eyebrow: "Action Guide",
+    intro:
+      "Self awareness is useful only when it changes how you choose, communicate or recover. Many people understand their patterns but stay stuck because insight never becomes a small concrete action.",
+    ctaLabel: "Take the Personality Test",
+    ctaPath: "/tests/personality-test",
+    sections: [
+      {
+        title: "Why awareness alone is not enough",
+        body:
+          "Awareness can become another form of rumination if it never leaves your head. Knowing your pattern matters, but the next step is designing one behavior that uses the insight in real life.",
+      },
+      {
+        title: "Turn a pattern into a decision rule",
+        body:
+          "A decision rule makes awareness practical. If you know certain people drain you, set recovery boundaries. If you overthink, create a reflection limit. If you avoid action, choose one small test.",
+        bullets: [
+          "Name the pattern",
+          "Choose one repeatable response",
+          "Make the response small enough to use",
+          "Review what changed after one week",
+        ],
+      },
+      {
+        title: "Use strengths as the path",
+        body:
+          "Change works better when it uses your strengths. A reflective person may need structured journaling. A relational person may need accountability. A creator may need a visible project.",
+      },
+      {
+        title: "Measure movement, not perfection",
+        body:
+          "The goal is not to fix your whole personality. The goal is one clearer conversation, one better boundary, one finished task or one decision made with less self-doubt.",
+      },
+    ],
+  },
 ];
 
 export function getGuideBySlug(slug: string) {

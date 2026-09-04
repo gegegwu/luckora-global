@@ -10,12 +10,13 @@ import { getDictionary } from "@/lib/i18n";
 import { jsonLd, organizationSchema, websiteSchema } from "@/lib/schema";
 
 const priorityGuideSlugs = [
+  "free-ai-personality-test-online",
   "why-do-i-overthink-everything",
   "why-do-i-overthink-relationships",
   "why-do-i-feel-emotionally-drained",
-  "why-am-i-so-sensitive",
+  "personality-test-for-career-direction",
   "how-to-stop-overthinking-at-night",
-  "how-to-find-your-personality-type",
+  "how-to-choose-a-personality-test",
 ];
 
 const seoEntryLinks = priorityGuideSlugs

@@ -64,16 +64,51 @@ export const seoHubs: SeoHub[] = [
   },
 ];
 
+const guidePath = (slug: string) => `/guides/${slug}`;
+
+const guideItem = (slug: string): SeoCollectionItem => {
+  const guide = guideArticles.find((article) => article.slug === slug);
+
+  if (!guide) {
+    throw new Error(`Missing guide article for SEO hub: ${slug}`);
+  }
+
+  return {
+    path: guidePath(guide.slug),
+    title: guide.title,
+    description: guide.description,
+    label: guide.eyebrow,
+  };
+};
+
 export const futureSeoCollections: Record<string, SeoCollectionItem[]> = {
-  careers: [],
-  strengths: [],
+  careers: [
+    guideItem("personality-test-for-career-direction"),
+    guideItem("what-are-my-hidden-strengths"),
+    guideItem("how-to-know-what-you-are-good-at"),
+    guideItem("free-ai-personality-test-online"),
+    guideItem("how-to-turn-self-awareness-into-action"),
+  ],
+  strengths: [
+    guideItem("how-to-understand-your-hidden-strengths"),
+    guideItem("what-are-my-hidden-strengths"),
+    guideItem("signs-your-sensitivity-is-a-strength"),
+    guideItem("how-to-know-what-you-are-good-at"),
+    guideItem("how-to-stop-second-guessing-yourself"),
+  ],
   guides: guideArticles.map((guide) => ({
     path: `/guides/${guide.slug}`,
     title: guide.title,
     description: guide.description,
     label: guide.eyebrow,
   })),
-  reports: [],
+  reports: [
+    guideItem("free-ai-personality-test-online"),
+    guideItem("how-to-choose-a-personality-test"),
+    guideItem("what-is-a-self-discovery-test"),
+    guideItem("how-to-find-your-personality-type"),
+    guideItem("how-to-turn-self-awareness-into-action"),
+  ],
 };
 
 export function getSeoHub(path: string) {

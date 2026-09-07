@@ -116,9 +116,13 @@ export function getSeoHub(path: string) {
 }
 
 export function getFutureSeoRoutes() {
-  return Object.values(futureSeoCollections)
-    .flat()
-    .map((item) => item.path);
+  return Array.from(
+    new Set(
+      Object.values(futureSeoCollections)
+        .flat()
+        .map((item) => item.path),
+    ),
+  );
 }
 
 export function getSeoCollection(path: string) {

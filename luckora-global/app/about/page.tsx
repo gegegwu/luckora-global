@@ -33,7 +33,7 @@ export default function AboutPage() {
         },
         {
           title: "Current stage",
-          body: "Luckora is in an early public launch stage. We keep the experience simple: one core personality test, clear result pages and SEO-friendly educational content. We do not claim fake user numbers, company history, partnerships or credentials.",
+          body: "Luckora is in an early public launch stage. The current experience includes personality, love-language and shadow-trait reflection tools, clear result pages and educational guides. We do not claim fake user numbers, company history, partnerships or credentials.",
         },
       ]}
       title={title}

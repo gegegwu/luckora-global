@@ -20,6 +20,7 @@ export function SiteFooter() {
           <a href="/privacy-policy">Privacy Policy</a>
           <a href="/terms">Terms</a>
           <a href="/disclaimer">Disclaimer</a>
+          <a href="/methodology">Methodology</a>
           <a href="/tests">Tests</a>
         </nav>
 

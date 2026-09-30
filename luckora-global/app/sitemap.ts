@@ -5,6 +5,7 @@ import { getFutureSeoRoutes } from "@/lib/seo-routes";
 const publicSeoPages = [
   "",
   "/ai-personality-test",
+  "/dark-personality-test",
   "/love-language-test",
   "/tests/love-language-test",
   "/free-personality-test",
@@ -20,6 +21,10 @@ const publicSeoPages = [
   "/privacy-policy",
   "/terms",
   "/disclaimer",
+  "/methodology",
+  "/tests/personality-test",
+  "/tests/love-language-test",
+  "/tests/dark-personality-test",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

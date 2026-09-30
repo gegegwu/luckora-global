@@ -73,6 +73,11 @@ export function StaticInfoPage({
               <strong>Disclaimer</strong>
               <p>Read the self-discovery scope and important limitations.</p>
             </a>
+            <a href="/methodology">
+              <span>Standards</span>
+              <strong>Test Methodology</strong>
+              <p>See how questions, scores, results and limitations are handled.</p>
+            </a>
           </div>
         </section>
 

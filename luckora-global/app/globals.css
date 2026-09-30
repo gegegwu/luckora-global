@@ -1476,6 +1476,34 @@ button {
   grid-column: 1 / -1;
 }
 
+.shadow-scale-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.shadow-scale-grid .answer-option {
+  min-height: 68px;
+}
+
+.shadow-explainer {
+  width: min(940px, calc(100% - 40px));
+  margin: 18px auto 72px;
+}
+
+.shadow-score-list {
+  margin-top: 30px;
+}
+
+.shadow-score-list .profile-score p {
+  margin-top: 12px;
+  font-size: 15px;
+}
+
+.test-note {
+  margin-top: 20px !important;
+  font-size: 14px !important;
+}
+
 .love-theme-shell {
   --love-pink: #ff8fb7;
   --love-rose: #ffbfd0;

@@ -127,6 +127,57 @@ export const testConfigs: TestConfig[] = [
     ],
   },
   {
+    id: "dark-traits",
+    title: "Dark Personality Test",
+    description:
+      "Explore strategic influence, recognition drive, emotional distance and bold impulse with a private 12-question reflection tool.",
+    slug: "dark-personality-test",
+    status: "available",
+    icon: "◐",
+    startPath: "/dark-personality-test",
+    seoTitle: "Dark Personality Test - Explore Your Shadow Traits | Luckora",
+    seoDescription:
+      "Take Luckora's free 12-question dark personality test and explore four shadow-trait dimensions without diagnostic labels.",
+    whatIsThis:
+      "Luckora's Dark Personality Test is a non-clinical reflection tool for understanding traits people often hide, overuse or misunderstand. It maps strategic influence, recognition drive, emotional distance and bold impulse, then explains the useful and risky side of the leading pattern.",
+    howItWorks: [
+      "Rate 12 behavior statements from strongly disagree to strongly agree.",
+      "Three items, including reverse-scored prompts, contribute to each trait dimension.",
+      "Receive four transparent scores plus a strength, risk and practical reflection exercise.",
+    ],
+    discoveries: [
+      "Strategic influence",
+      "Recognition drive",
+      "Emotional distance",
+      "Bold impulse",
+      "One practical awareness exercise",
+    ],
+    seoSections: [
+      {
+        title: "What does a dark personality score mean?",
+        body: "A dark trait score is best treated as a prompt for observation. Most people use strategy, seek recognition, create emotional distance or take bold risks in some situations. A higher score means your answers aligned more strongly with that tendency inside this test. It does not mean you have a disorder, and it cannot describe how you behave in every relationship or environment.",
+      },
+      {
+        title: "Why strengths and risks appear together",
+        body: "The same trait can help in one context and cause harm in another. Strategic influence can support negotiation but weaken trust when intentions stay hidden. Emotional distance can support crisis decisions but make connection harder. The goal is to notice when a useful pattern becomes automatic, costly or disconnected from your values.",
+      },
+    ],
+    faq: [
+      {
+        question: "Is this a psychological diagnosis?",
+        answer: "No. The test is an educational reflection tool and does not diagnose a personality disorder or mental health condition.",
+      },
+      {
+        question: "Are answers private?",
+        answer: "No account is required. Answers are processed in the browser and encoded in the result page address.",
+      },
+      {
+        question: "Can a dark trait be useful?",
+        answer: "Yes. Each measured tendency can support a useful behavior when it is balanced with awareness, empathy and consequences.",
+      },
+    ],
+  },
+  {
     id: "strengths",
     title: "AI Strengths Test",
     description:

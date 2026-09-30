@@ -30,6 +30,11 @@ const seoEntryLinks = priorityGuideSlugs
 
 const seoUtilityLinks = [
   {
+    href: "/dark-personality-test",
+    label: "Dark Personality Test",
+    text: "Map four shadow-trait dimensions with transparent scoring.",
+  },
+  {
     href: "/ai-personality-test",
     label: "AI Personality Test",
     text: "Understand your traits, strengths and growth direction.",

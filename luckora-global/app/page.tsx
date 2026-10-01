@@ -30,6 +30,11 @@ const seoEntryLinks = priorityGuideSlugs
 
 const seoUtilityLinks = [
   {
+    href: "/introvert-test",
+    label: "Introvert Test",
+    text: "See whether you prefer solitude or are simply socially drained.",
+  },
+  {
     href: "/dark-personality-test",
     label: "Dark Personality Test",
     text: "Map four shadow-trait dimensions with transparent scoring.",

@@ -178,6 +178,56 @@ export const testConfigs: TestConfig[] = [
     ],
   },
   {
+    id: "introvert",
+    title: "Introvert Test - Introverted or Just Drained?",
+    description:
+      "Compare solitude preference, social depletion and desire for connection with a private 12-question reflection tool.",
+    slug: "introvert-test",
+    status: "available",
+    icon: "◒",
+    startPath: "/introvert-test",
+    seoTitle: "Introvert Test - Introverted or Just Drained? | Luckora",
+    seoDescription:
+      "Take a free introvert test and compare solitude preference, social exhaustion and desire for connection. No signup required.",
+    whatIsThis:
+      "Luckora's Introvert Test helps separate a stable preference for solitude from temporary social depletion. It maps three signals instead of forcing every user into a simple introvert or extrovert label.",
+    howItWorks: [
+      "Rate 12 behavior-based statements from strongly disagree to strongly agree.",
+      "Compare your solitude preference, social depletion and desire for connection.",
+      "Receive a practical pattern, transparent scores and one experiment to try.",
+    ],
+    discoveries: [
+      "Solitude preference",
+      "Social depletion",
+      "Desire for connection",
+      "A practical next step",
+    ],
+    seoSections: [
+      {
+        title: "Are you introverted or just socially exhausted?",
+        body: "Introversion and social exhaustion can look similar from the outside, but they are not identical. Introversion is usually a recurring preference for lower-stimulation settings, deeper interaction and time alone to reset. Social exhaustion is a state that can affect anyone after stress, noise, emotional labor or too many demands. Looking at both patterns helps explain why someone may avoid plans this week while still caring deeply about connection.",
+      },
+      {
+        title: "What does an introvert test measure?",
+        body: "A useful introvert test should look beyond whether someone enjoys parties. Luckora compares preference for solitude, the speed at which social stimulation drains energy and whether connection still feels appealing when the person is rested. The result is a reflection pattern rather than a permanent identity or clinical diagnosis.",
+      },
+    ],
+    faq: [
+      {
+        question: "Can an introvert enjoy social time?",
+        answer: "Yes. Introversion describes energy and stimulation preferences, not whether someone likes people. Many introverts enjoy close relationships and meaningful conversation.",
+      },
+      {
+        question: "Is social exhaustion the same as introversion?",
+        answer: "No. Social exhaustion is a temporary state that can affect introverts, ambiverts and extroverts, especially during periods of stress or overstimulation.",
+      },
+      {
+        question: "Is the introvert test free?",
+        answer: "Yes. The 12-question Luckora Introvert Test is free and does not require an account.",
+      },
+    ],
+  },
+  {
     id: "strengths",
     title: "AI Strengths Test",
     description:

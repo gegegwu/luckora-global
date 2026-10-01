@@ -6,6 +6,7 @@ const publicSeoPages = [
   "",
   "/ai-personality-test",
   "/dark-personality-test",
+  "/introvert-test",
   "/love-language-test",
   "/tests/love-language-test",
   "/free-personality-test",
@@ -25,6 +26,7 @@ const publicSeoPages = [
   "/tests/personality-test",
   "/tests/love-language-test",
   "/tests/dark-personality-test",
+  "/tests/introvert-test",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
